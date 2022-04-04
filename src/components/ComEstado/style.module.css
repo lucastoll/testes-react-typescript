@@ -1,0 +1,17 @@
+.juninho {
+    font-size: 48px;
+    color: red;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divisor{
+    width: 90vw;
+    height: 4px;
+    background: black;
+    margin: 0 auto;
+}
