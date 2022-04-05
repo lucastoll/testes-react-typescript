@@ -1,12 +1,12 @@
-import {HelloComEstado} from './components/ComEstado';
-import {HelloSemEstado} from './components/semEstado';
+import { Header } from "./components/header";
+import { GlobalStyle } from "./styles/GlobalStyle";
 
 export default function App() {
   return (
-   <>
-   <HelloComEstado name="juninho" />
-   <HelloSemEstado name="juninho" />
-   </>
+    <>
+    <GlobalStyle />
+      <Header />
+    </>
   );
 }
 
