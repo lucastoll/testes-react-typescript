@@ -4,11 +4,13 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 import { Section1 } from "./components/section1";
 import { Section2 } from "./components/section2";
 import { Section3 } from "./components/section3";
+import React from "react";
+
 
 export default function App() {
   return (
     <>
-    <GlobalStyle />
+      <GlobalStyle />
       <Header />
       <Home />
       <Section1></Section1>
@@ -17,5 +19,3 @@ export default function App() {
     </>
   );
 }
-
-
