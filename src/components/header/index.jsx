@@ -13,7 +13,7 @@ export const Header = function () {
       </DivLogo>
       <WrapperLinks>
         <li>
-          <a href="#secao1">SECTION</a>
+          <a href="#secao1">STATES E PROPS</a>
         </li>
         <li>
           <a href="#secao2">SECTION</a>

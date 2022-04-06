@@ -15,4 +15,20 @@ a{
         color: inherit;
     }
 }
+
+html{
+    font-size: 75%
+}
+
+@media screen and (min-width: 768px){
+    html{
+        font-size: 93.75%
+    }
+}
+
+@media screen and (min-width: 1024px){
+    html{
+        font-size: 100%
+    }
+}
 `;
