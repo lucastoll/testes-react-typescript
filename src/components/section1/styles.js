@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   position: relative;
+  padding-bottom: 50px;
 `;
 
 export const Titulo = styled.h1`
@@ -42,7 +43,8 @@ export const DivSonic = styled.div`
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 50px;
+    width: 40vw;
 `
 
  
