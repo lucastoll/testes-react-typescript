@@ -31,8 +31,9 @@ export const WrapperLinks = styled.div`
   display: flex;
   list-style: none;
   color: #0038a8;
-  font-size: 16px;
+  font-size: 14px;
   gap: 10px;
+  margin-bottom: 5px;
 
   @media screen and (min-width: 768px) {
     font-size: 20px;

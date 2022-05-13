@@ -16,6 +16,8 @@ export const Titulo = styled.h1`
   color: white;
   font-size: 36px;
   margin-top: 20px;
+  text-align: center;
+  margin: 10px 20px;
 `;
 
 export const Link = styled.div`
@@ -43,8 +45,13 @@ export const DivSonic = styled.div`
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 50px;
     width: 40vw;
+
+    > img {
+        width: 300px;
+    }
 `
 
  

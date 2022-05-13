@@ -13,13 +13,16 @@ export const Header = function () {
       </DivLogo>
       <WrapperLinks>
         <li>
-          <a href="#secao1">STATES E PROPS</a>
+          <a href="#secao1">States e Props</a>
         </li>
         <li>
-          <a href="#secao2">SECTION</a>
+          <a href="#secao2">UseEffect</a>
         </li>
         <li>
-          <a href="#secao3">SECTION</a>
+          <a href="#secao3">Formulário</a>
+        </li>
+        <li>
+          <a href="#secao5">.map</a>
         </li>
       </WrapperLinks>
     </Wrapper>
