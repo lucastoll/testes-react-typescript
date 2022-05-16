@@ -22,7 +22,7 @@ export const Header = function () {
           <a href="#secao3">Formulário</a>
         </li>
         <li>
-          <a href="#secao5">.map</a>
+          <a href="#secao5">Renderização com .map</a>
         </li>
       </WrapperLinks>
     </Wrapper>

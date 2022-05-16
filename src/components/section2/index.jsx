@@ -2,18 +2,8 @@ import React, { useEffect, useState } from "react";
 import imgMobile from "../../assets/section2/mobile.png"
 import imgTablet from "../../assets/section2/tablet.png"
 import styled from "styled-components";
-import { Container, Link, Titulo } from "../section1/styles";
+import { Container, Link, Titulo, Wrapper } from "../section1/styles";
 
-const Wrapper = styled.div`
-width: 100%;
-height: auto;
-background-color: #6b750e;
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: center;
-position: relative;
-`;
 
 const Espaco = styled.div`
   margin-bottom: 0px;
@@ -30,7 +20,7 @@ export const Section2 = function () {
   }, [width])
 
   return (
-    <Wrapper>
+    <Wrapper style={{backgroundColor: '#6b750e', paddingBottom: "0px"}}>
       <Link id="secao2"></Link>
       <Titulo>UseEffect</Titulo>
       <Container>

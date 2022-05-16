@@ -35,6 +35,10 @@ export const Titulo = styled.h1`
 
 export const Container = styled.div`
   padding-top: 100px;
+
+  @media screen and (min-width: 410px) {
+    padding-top: 70px;
+  }
 `;
 
 export const Link = styled.div`

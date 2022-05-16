@@ -50,7 +50,8 @@ export const Container = styled.div`
     width: 40vw;
 
     > img {
-        width: 300px;
+        max-width: 300px;
+        width: 100%;
     }
 `
 

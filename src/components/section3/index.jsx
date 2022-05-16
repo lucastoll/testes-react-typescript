@@ -1,18 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link, Titulo } from "../section1/styles";
-
-  const Wrapper = styled.div`
-  width: 100%;
-  height: auto;
-  background-color: blue;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-  padding-bottom: 50px;
-  `;
+import { Link, Titulo, Wrapper } from "../section1/styles";
 
 
 const Form = styled.form`
@@ -61,7 +49,7 @@ export const Section3 = function () {
     }
     
   return (
-    <Wrapper>
+    <Wrapper style={{backgroundColor: "blue"}}>
       <Link id="secao3"></Link>
       <Titulo>Formulário.</Titulo>
       <Form onSubmit={trocaTitulo}>

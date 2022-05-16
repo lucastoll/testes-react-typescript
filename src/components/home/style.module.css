@@ -1,9 +1,11 @@
 .sonic{
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
 }
 
 @media screen and (min-width: 768px) {
     .sonic{
+        max-width: none;
         width: auto;
     }
 }
