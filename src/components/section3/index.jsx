@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link, Titulo, Wrapper } from "../section1/styles";
+import { useToggleDisplayState } from "../../context/useToggleDisplay";
 
 
 const Form = styled.form`
@@ -36,6 +37,7 @@ const Form = styled.form`
   `;
 
 export const Section3 = function () {
+  const {display} = useToggleDisplayState();
     const [text, setText] = useState("sonic");
     const [nome, setNome] = useState("sonic");
     
@@ -49,23 +51,27 @@ export const Section3 = function () {
     }
     
   return (
-    <Wrapper style={{backgroundColor: "blue"}}>
-      <Link id="secao3"></Link>
-      <Titulo>Formulário.</Titulo>
-      <Form onSubmit={trocaTitulo}>
-        <h1>Boas vindas {nome}</h1>
-        <input
-          type="text"
-          value={text}
-          maxLength="20"
-          onChange={(event) => {
-            handleChange(event);
-          }}
-          placeholder="Digite o título da página"
-          required
-        />
-        <button type="submit">Trocar titulo</button>
-      </Form>
-    </Wrapper>
+    <>
+      {display ?
+      <Wrapper style={{backgroundColor: "blue"}}>
+        <Link id="secao3"></Link>
+        <Titulo>Formulário.</Titulo>
+        <Form onSubmit={trocaTitulo}>
+          <h1>Boas vindas {nome}</h1>
+          <input
+            type="text"
+            value={text}
+            maxLength="20"
+            onChange={(event) => {
+              handleChange(event);
+            }}
+            placeholder="Digite o título da página"
+            required
+          />
+          <button type="submit">Trocar titulo</button>
+        </Form>
+      </Wrapper>
+      : null}
+    </>
   );
 };

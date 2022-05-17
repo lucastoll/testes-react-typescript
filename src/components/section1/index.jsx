@@ -1,8 +1,11 @@
 import { Wrapper, Titulo, Link, Numero } from "./styles";
 import React, {useState, useEffect} from "react";
 import sonica from "../../assets/section1/sonica.png"
+import { useToggleDisplayState } from "../../context/useToggleDisplay";
+
 
 export const Section1 = function () {
+  const {display} = useToggleDisplayState();
   const [num, setNum] = useState(0);
   const [width, setWidth] = useState();
 
@@ -26,11 +29,15 @@ export const Section1 = function () {
   
 
   return (
-    <Wrapper>
-      <Link id="secao1"></Link>
-      <Titulo>States e Props</Titulo>
-      <img src={sonica} style={styles.sonicaImg} alt=""></img>
-      <Numero num={num} setNum={setNum}/>
-    </Wrapper>
+    <>
+      {display ?
+            <Wrapper>
+            <Link id="secao1"></Link>
+            <Titulo>States e Props</Titulo>
+            <img src={sonica} style={styles.sonicaImg} alt=""></img>
+            <Numero num={num} setNum={setNum}/>
+          </Wrapper>
+      : null}
+    </>
   );
 };

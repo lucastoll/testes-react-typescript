@@ -3,6 +3,7 @@ import imgMobile from "../../assets/section2/mobile.png"
 import imgTablet from "../../assets/section2/tablet.png"
 import styled from "styled-components";
 import { Container, Link, Titulo, Wrapper } from "../section1/styles";
+import { useToggleDisplayState } from "../../context/useToggleDisplay";
 
 
 const Espaco = styled.div`
@@ -10,6 +11,7 @@ const Espaco = styled.div`
 `
 
 export const Section2 = function () {
+  const {display} = useToggleDisplayState();
   const [width, setWidth] = useState();
 
   useEffect(() => {
@@ -20,20 +22,24 @@ export const Section2 = function () {
   }, [width])
 
   return (
-    <Wrapper style={{backgroundColor: '#6b750e', paddingBottom: "0px"}}>
-      <Link id="secao2"></Link>
-      <Titulo>UseEffect</Titulo>
-      <Container>
-        {
-        width < 768 ? 
-        <>
-          <img src={imgMobile} alt=""></img>
-          <Espaco></Espaco>
-        </>
-        : 
-        <img src={imgTablet} alt=""></img>
-        }
-      </Container>
-    </Wrapper>
+    <>
+      { display ? 
+      <Wrapper style={{backgroundColor: '#6b750e', paddingBottom: "0px"}}>
+        <Link id="secao2"></Link>
+        <Titulo>UseEffect</Titulo>
+        <Container>
+          {
+          width < 768 ? 
+          <>
+            <img src={imgMobile} alt=""></img>
+            <Espaco></Espaco>
+          </>
+          : 
+          <img src={imgTablet} alt=""></img>
+          }
+        </Container>
+      </Wrapper>
+      : null}
+    </>
   );
 };

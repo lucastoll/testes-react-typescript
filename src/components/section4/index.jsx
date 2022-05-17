@@ -1,15 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
+import { useToggleDisplayState } from "../../context/useToggleDisplay";
+
 import { Link, Titulo } from "../section1/styles";
-import Slider from "react-slick";
-import logo from "../../assets/section4/logo.png";
+import Card from "./card";
+
 import { v4 as uuidv4} from 'uuid'
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
 const Wrapper = styled.div`
 width: 100%;
-height: 700px;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -27,66 +29,10 @@ width: 250px;
 margin-top: 20px;
 `;
 
-const Card = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: flex-start;
-width: 100%;
-height: 450px;
-background: #eff7f9;
-border: 10px solid #012d6c;
-border-radius: 32px;
-color: #012d6c;
-padding: 10px;
-gap: 20px;
-position: relative;
 
-.WrapperNome{
-    background: #012d6c;
-    clip-path: polygon(25% 0%, 100% 0%, 83% 99%, 0 100%);
-    color: white;
-    font-family: sans-serif;
-    font-size: 22px;
-    font-weight: 600;
-    height: 30px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding-top: 2px;
-    margin-top: 20px;
-}
+export function Section4() {
+    const {display} = useToggleDisplayState();
 
-.Logo{
-    width: 90px;
-    position: absolute;
-    z-index: 1;
-    left: 5px;
-    top: -25px;
-
-}
-
-.ImagemPersonagem{
-    width: 80%;
-    height: 200px;
-}
-
-.DivTexto{
-    width: 90%;
-    height: 100px;
-    border: 5px solid #012d6c;
-    color: #012d6c;
-    font-size: 18px;
-    padding: 4px;
-    font-family: sans-serif;
-    text-align: left;
-}
-`;
-
-export class Section4 extends Component {
-  render() {
     const settings = {
       dots: true,
       fade: true,
@@ -107,27 +53,22 @@ export class Section4 extends Component {
     ]
 
     return (
-    <Wrapper>
-      <Link id="secao5"></Link>
-      <Titulo>Renderização com .map</Titulo>
-      <h2>Dado uma array personagensSonic[ ], a aplicação renderiza:</h2>
-    <CarouselContainer>
-        <Slider {...settings}>
-        {personagensSonic.map((personagem) => (
-            <div key={uuidv4()}>
-            <Card>
-                <img className="Logo" src={logo} alt=""/>
-                <div className="WrapperNome"><p>{personagem.nome}</p></div>
-                <img className="ImagemPersonagem" src={personagem.imagem} alt="" />
-                <div className="DivTexto">{personagem.texto}</div>
-            </Card>
-            </div>
-        ))}
-        </Slider>
-    </CarouselContainer>
+    <Wrapper style={display ? null : {backgroundColor: '#979797'}}>
+      <Link id="secao4"></Link>
+      {display ? <Titulo>Renderização com .map</Titulo> : <Titulo style={{color: '#000000'}}>?CONTEXTO?</Titulo>} 
+      {display ? <h2>Dado uma array personagensSonic[ ], a aplicação renderiza:</h2> : null}
+        <CarouselContainer>
+            <Slider {...settings}>
+                {personagensSonic.map((personagem) => (
+                    <div key={uuidv4()}>
+                        <Card personagem={personagem} display={display ? 1 : undefined}/> {/* Tratamento feito no display pra tirar o erro 'Recieved true for a non-boolean atributte' */}
+                    </div>
+                ))}
+            </Slider>
+        </CarouselContainer>
     </Wrapper>
     );
   }
-}
+
 
 
