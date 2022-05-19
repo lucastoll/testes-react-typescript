@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link, Titulo, Wrapper } from "../section1/styles";
+import { Link, Titulo, Wrapper } from "../useState&props/styles";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 
 
 const Form = styled.form`
-  width: calc(fit-content);
+  width: fit-content;
   padding: 20px;
-  background: blue;
-  margin-top: 15px;
+  background: #2991e6;
+  margin: 15px 20px 0px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,12 +20,15 @@ const Form = styled.form`
   > h1 {
     color: white;
     font-size: 24px;
+    text-align: center;
   }
 
   > input {
-      width: 200px;
+    width: 200px;
     height: 40px;
-    padding: 4px;
+    padding: 6px;
+    background-color: white;
+    border: 2px solid black;
   }
 
   > button {
@@ -34,6 +37,17 @@ const Form = styled.form`
       padding: 4px;
       font-size: 24px;
   }
+  `;
+
+  const Button = styled.button`
+  font-size: 16px;
+  margin: 4px 2px;
+  padding: 16px 32px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #2991e6;
+  color: white;
+  border: 2px solid white;
   `;
 
 export const Section3 = function () {
@@ -53,7 +67,7 @@ export const Section3 = function () {
   return (
     <>
       {display ?
-      <Wrapper style={{backgroundColor: "blue"}}>
+      <Wrapper style={{backgroundColor: "#2991e6"}}>
         <Link id="secao3"></Link>
         <Titulo>Formulário.</Titulo>
         <Form onSubmit={trocaTitulo}>
@@ -68,7 +82,7 @@ export const Section3 = function () {
             placeholder="Digite o título da página"
             required
           />
-          <button type="submit">Trocar titulo</button>
+          <Button type="submit">Trocar titulo</Button>
         </Form>
       </Wrapper>
       : null}

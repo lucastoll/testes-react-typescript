@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 
-import { Link, Titulo } from "../section1/styles";
+import { Link, Titulo } from "../useState&props/styles";
 import Card from "./card";
 
 import { v4 as uuidv4} from 'uuid'
@@ -13,9 +13,11 @@ import "slick-carousel/slick/slick-theme.css";
 const Wrapper = styled.div`
 width: 100%;
 display: flex;
+padding: 50px 0px 70px 0px;
 flex-direction: column;
 align-items: center;
-background-color: #a0ad25;
+background-color: #c70000;
+border-top: 10px solid #e0e000;
 color: white;
 > h2 {
     margin: 15px;
@@ -27,6 +29,28 @@ position: relative;
 const CarouselContainer = styled.div`
 width: 250px;
 margin-top: 20px;
+
+.slick-dots li button:before{
+  color: white;
+  opacity: 0.5;
+  font-size: 12px;
+}
+
+.slick-dots li button:hover:before{
+    opacity: 0.75;
+}
+
+.slick-dots li.slick-active button:before{
+    opacity: 0.9;
+}
+
+.slick-prev:before, .slick-next:before{
+   font-size: 30px;
+}
+
+.slick-prev{
+    left: -35px;
+}
 `;
 
 
@@ -39,8 +63,9 @@ export function Section4() {
       infinite: true,
       speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
     };
+    
 
     const personagensSonic = [
         {nome: "Sonic", imagem: "https://i.pinimg.com/originals/51/65/d5/5165d56c7349e2bcbf0cf4ec32b2fab7.png", texto: "O sonic."},
@@ -61,7 +86,7 @@ export function Section4() {
             <Slider {...settings}>
                 {personagensSonic.map((personagem) => (
                     <div key={uuidv4()}>
-                        <Card personagem={personagem} display={display ? 1 : undefined}/> {/* Tratamento feito no display pra tirar o erro 'Recieved true for a non-boolean atributte' */}
+                        <Card personagem={personagem}/> 
                     </div>
                 ))}
             </Slider>

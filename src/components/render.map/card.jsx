@@ -2,28 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import logo from "../../assets/section4/logo.png";
 import contexto from "../../assets/section4/contexto.jpg";
-
-const Card = ({personagem, display}) => {
-    return (
-        <>
-            {display 
-            ?
-            <CardStyled display={display}>
-                <img className="Logo" src={logo} alt=""/>
-                <div className="WrapperNome"><p>{personagem.nome}</p></div>
-                <img className="ImagemPersonagem" src={personagem.imagem} alt="" />
-                <div className="DivTexto">{personagem.texto}</div>
-            </CardStyled>
-            : 
-            <CardStyled>
-                <div className="WrapperNome"><p>UseContext</p></div>
-                <img className="ImagemPersonagem" src={contexto} alt="" />
-                <div className="DivTexto">O contexto foi alterado.</div>
-            </CardStyled>
-            }
-        </>
-    )
-}
+import { useToggleDisplayState } from "../../context/useToggleDisplay";
 
 const CardStyled = styled.div`
 display: flex;
@@ -32,7 +11,6 @@ align-items: center;
 justify-content: flex-start;
 width: 100%;
 height: 450px;
-margin-bottom: 50px;
 background: #eff7f9;
 border: ${props => props.display ? '10px solid #012d6c' : '10px solid #000000'};
 border-radius: 32px;
@@ -82,5 +60,29 @@ position: relative;
     text-align: left;
 }
 `;
+
+const Card = ({personagem}) => {
+    const {display} = useToggleDisplayState();
+
+    return (
+        <>
+            {display 
+            ?
+            <CardStyled display={display ? 1 : undefined}> {/* Tratamento feito no display pra tirar o erro 'Recieved true for a non-boolean atributte' */}
+                <img className="Logo" src={logo} alt=""/>
+                <div className="WrapperNome"><p>{personagem.nome}</p></div>
+                <img className="ImagemPersonagem" src={personagem.imagem} alt="" />
+                <div className="DivTexto">{personagem.texto}</div>
+            </CardStyled>
+            : 
+            <CardStyled>
+                <div className="WrapperNome"><p>UseContext</p></div>
+                <img className="ImagemPersonagem" src={contexto} alt="" />
+                <div className="DivTexto">O contexto foi alterado.</div>
+            </CardStyled>
+            }
+        </>
+    )
+}
 
 export default Card;

@@ -13,7 +13,6 @@ export const Section1 = function () {
     setWidth(window.innerWidth)
     window.addEventListener("resize", () => {
       setWidth(window.innerWidth)
-      console.log(width)
     })
   }, [width])
 

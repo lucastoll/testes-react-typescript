@@ -34,10 +34,10 @@ export const Titulo = styled.h1`
 `;
 
 export const Container = styled.div`
-  padding-top: 100px;
+  padding-top: 113px;
 
   @media screen and (min-width: 410px) {
-    padding-top: 70px;
+    padding-top: 110px;
   }
 `;
 

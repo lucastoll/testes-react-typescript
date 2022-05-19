@@ -1,11 +1,11 @@
 import { Header } from "./components/header";
-import { Home } from "./components/home";
+import { Home } from "./components/hero";
 import { GlobalStyle } from "./styles/GlobalStyle";
-import { Section1 } from "./components/section1";
-import { Section2 } from "./components/section2";
-import { Section3 } from "./components/section3";
-import { Section4 } from "./components/section4";
-import { Section5 } from "./components/section5";
+import { Section1 } from "./components/useState&props";
+import { Section2 } from "./components/useEffect";
+import { Section3 } from "./components/formulario";
+import { Section4 } from "./components/render.map";
+import { Section5 } from "./components/useContext";
 import { ToggleDisplayProvider } from "./context/useToggleDisplay";
 
 export default function App() {
