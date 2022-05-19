@@ -80,9 +80,9 @@ export function Section4() {
     return (
     <Wrapper style={display ? null : {backgroundColor: '#979797'}}>
       <Link id="secao4"></Link>
-      {display ? <Titulo>Renderização com .map</Titulo> : <Titulo style={{color: '#000000'}}>?CONTEXTO?</Titulo>} 
-      {display ? <h2>Dado uma array personagensSonic[ ], a aplicação renderiza:</h2> : null}
-        <CarouselContainer>
+      {display ? <Titulo data-aos="zoom-in">Renderização com .map</Titulo> : <Titulo style={{color: '#000000'}}>?CONTEXTO?</Titulo>} 
+      {display ? <h2 data-aos="zoom-in">Dado uma array personagensSonic[ ], a aplicação renderiza:</h2> : null}
+        <CarouselContainer data-aos="zoom-in">
             <Slider {...settings}>
                 {personagensSonic.map((personagem) => (
                     <div key={uuidv4()}>

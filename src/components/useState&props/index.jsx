@@ -1,8 +1,8 @@
 import { Wrapper, Titulo, Link, Numero } from "./styles";
 import React, {useState, useEffect} from "react";
-import sonica from "../../assets/section1/sonica.png"
+import sonica from "../../assets/states&props/sonica.png"
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
-
+import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 export const Section1 = function () {
   const {display} = useToggleDisplayState();
@@ -32,9 +32,9 @@ export const Section1 = function () {
       {display ?
             <Wrapper>
             <Link id="secao1"></Link>
-            <Titulo>States e Props</Titulo>
-            <img src={sonica} style={styles.sonicaImg} alt=""></img>
-            <Numero num={num} setNum={setNum}/>
+            <Titulo data-aos="fade">States e Props</Titulo>
+            <img data-aos="fade" src={sonica} style={styles.sonicaImg} alt=""></img>
+            <Numero data-aos="fade" num={num} setNum={setNum}/>
           </Wrapper>
       : null}
     </>

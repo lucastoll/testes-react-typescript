@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../../assets/section4/logo.png";
-import contexto from "../../assets/section4/contexto.jpg";
+import logo from "../../assets/render.map/logo.png";
+import contexto from "../../assets/render.map/contexto.jpg";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 
 const CardStyled = styled.div`

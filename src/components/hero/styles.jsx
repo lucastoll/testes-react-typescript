@@ -1,26 +1,32 @@
 import styled from "styled-components";
-import background from "../../assets/home/background.jpg";
-
+  
 export const Wrapper = styled.div`
-  height: 300px;
+  height: 400px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.6) 50%,
-      rgba(0, 0, 0, 0.6) 50%
-    ),
-    url("${background}");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
   text-decoration: underline;
   position: relative;
 
   @media screen and (min-width: 768px) {
-    height: 500px;
+    height: calc(100vh - 110px)
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
   }
 `;
 

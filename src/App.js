@@ -7,8 +7,18 @@ import { Section3 } from "./components/formulario";
 import { Section4 } from "./components/render.map";
 import { Section5 } from "./components/useContext";
 import { ToggleDisplayProvider } from "./context/useToggleDisplay";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { useEffect } from "react";
 
 export default function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      once: true,
+      offset: 200,
+    });
+  }, [])
   return (
     <>
       <GlobalStyle />

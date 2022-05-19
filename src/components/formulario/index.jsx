@@ -69,8 +69,8 @@ export const Section3 = function () {
       {display ?
       <Wrapper style={{backgroundColor: "#2991e6"}}>
         <Link id="secao3"></Link>
-        <Titulo>Formulário.</Titulo>
-        <Form onSubmit={trocaTitulo}>
+        <Titulo data-aos="fade-right">Formulário.</Titulo>
+        <Form data-aos="fade-right" onSubmit={trocaTitulo}>
           <h1>Boas vindas {nome}</h1>
           <input
             type="text"

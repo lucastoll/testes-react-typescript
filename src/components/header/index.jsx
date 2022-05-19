@@ -10,31 +10,6 @@ export const Header = function () {
     setMobileWrapperLinks(!mobileWrapperLinks);
   }
 
-/*   const Links = ({mobileWrapperLinks}) => {
-    return (
-        <>
-          <WrapperLinks mobileWrapperLinks={mobileWrapperLinks}>
-            <li>
-              <a href="#secao1">States e Props</a>
-            </li>
-            <li>
-              <a href="#secao2">UseEffect</a>
-            </li>
-            <li>
-              <a href="#secao3">Formulário</a>
-            </li>
-            <li>
-              <a href="#secao4">Renderização com .map</a>
-            </li>
-            <li>
-              <a href="#secao5">Use Context</a>
-            </li>
-          </WrapperLinks>
-        </>
-    )
-  } */
-
-
   return (
     <>
       {display ? 
@@ -50,7 +25,6 @@ export const Header = function () {
           alt="" 
           />
         </DivLogo>
-        {/* <Links mobileWrapperLinks={mobileWrapperLinks}/> */}
         <WrapperLinks mobileWrapperLinks={mobileWrapperLinks}>
             <li>
               <a href="#secao1">States e Props</a>
