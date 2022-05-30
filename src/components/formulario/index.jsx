@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link, Titulo, Wrapper } from "../useState&props/styles";
+import { Link, Titulo, Wrapper } from "../UseState&props/styles";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 
 
@@ -50,7 +50,7 @@ const Form = styled.form`
   border: 2px solid white;
   `;
 
-export const Section3 = function () {
+export const Formulario = function () {
   const {display} = useToggleDisplayState();
     const [text, setText] = useState("sonic");
     const [nome, setNome] = useState("sonic");

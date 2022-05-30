@@ -1,4 +1,4 @@
-import { Wrapper, Titulo, Link } from "../useState&props/styles"
+import { Wrapper, Titulo, Link } from "../UseState&props/styles"
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 import styled from 'styled-components';
 
@@ -20,7 +20,7 @@ const P = styled.p`
     margin-bottom: 25px;
 `;
 
-export const Section5 = function () {
+export const UseContext = function () {
     const {display, setDisplay} = useToggleDisplayState();
     return(
         <Wrapper data-aos="flip-left" style={display ? {backgroundColor: "#000000"} : {backgroundColor: "#000000"}}>

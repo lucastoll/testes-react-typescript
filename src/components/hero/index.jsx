@@ -7,7 +7,7 @@ import gameplay from "../../assets/hero/gameplay.mp4"
 
 
 
-export const Home = function () {
+export const Hero = function () {
   const {display} = useToggleDisplayState();
   return (
     <>

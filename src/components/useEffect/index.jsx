@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import imgMobile from "../../assets/useEffect/mobile.png"
 import imgTablet from "../../assets/useEffect/tablet.png"
 import styled from "styled-components";
-import { Container, Link, Titulo, Wrapper } from "../useState&props/styles";
+import { Container, Link, Titulo, Wrapper } from "../UseState&props/styles";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 
 
 const Espaco = styled.div`
   margin-bottom: 0px;
 `
-export const Section2 = function () {
+export const UseEffect = function () {
   const {display} = useToggleDisplayState();
   const [width, setWidth] = useState();
 

@@ -1,4 +1,3 @@
-import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { StatesProps } from "./components/UseState&props";
@@ -22,16 +21,12 @@ export default function App() {
   
   return (
     <>
-      <GlobalStyle />
-      <ToggleDisplayProvider>
-        <Header />
         <Hero />
         <StatesProps></StatesProps>
         <UseEffect></UseEffect>
         <Formulario></Formulario>
         <RenderMap></RenderMap>
         <UseContext></UseContext>
-      </ToggleDisplayProvider>
     </>
   );
 }

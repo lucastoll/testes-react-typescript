@@ -4,7 +4,7 @@ import sonica from "../../assets/states&props/sonica.png"
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
-export const Section1 = function () {
+export const StatesProps = function () {
   const {display} = useToggleDisplayState();
   const [num, setNum] = useState(0);
   const [width, setWidth] = useState();

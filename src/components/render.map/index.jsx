@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 
-import { Link, Titulo } from "../useState&props/styles";
+import personagensSonic from "../../assets/personagensSonic.json"
+import { Link, Titulo } from "../UseState&props/styles";
 import Card from "./card";
 
 import { v4 as uuidv4} from 'uuid'
@@ -54,7 +55,7 @@ margin-top: 20px;
 `;
 
 
-export function Section4() {
+export function RenderMap() {
     const {display} = useToggleDisplayState();
 
     const settings = {
@@ -66,17 +67,6 @@ export function Section4() {
       slidesToScroll: 1,
     };
     
-
-    const personagensSonic = [
-        {nome: "Sonic", imagem: "https://i.pinimg.com/originals/51/65/d5/5165d56c7349e2bcbf0cf4ec32b2fab7.png", texto: "O sonic."},
-        {nome: "Eggman", imagem: "http://retrocdn.net/images/b/bd/Superstars_Eggman.png", texto: "???????? Que porra é essa maluco esquisito"},
-        {nome: "Amy", imagem: "https://w7.pngwing.com/pngs/723/671/png-transparent-amy-rose-sonic-the-fighters-tails-sonic-heroes-sonic-runners-others-3d-computer-graphics-sonic-the-hedgehog-video-game-thumbnail.png", texto: "PNG filho da puta"},
-        {nome: "Shadow", imagem: "https://www.pngitem.com/pimgs/m/562-5620563_shadow-sonic-png-download-shadow-the-hedgehog-color.png", texto: "Não sei mano achei daora"},
-        {nome: "Tails", imagem: "https://imagensemoldes.com.br/wp-content/uploads/2018/05/Sonic-Tails-Raposa-4-PNG.png", texto: "Raposão dois rabos."},
-        {nome: "Knuckles", imagem: "https://www.seekpng.com/png/full/210-2101113_knuckles-sonic-the-hedgehog-knuckles-the-echidna.png", texto: "pézão 52"},
-        {nome: "Sonic SSJ", imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_ZhWgB3ZfXAyGvb4-V6jsZt6QcaTuPVkxFQ&usqp=CAU", texto: "AAAAAAAAAAAAA\nAAAAAAA\nAAAAAAAAAA\nAAAAAAA"}
-    ]
-
     return (
     <Wrapper style={display ? null : {backgroundColor: '#979797'}}>
       <Link id="secao4"></Link>
