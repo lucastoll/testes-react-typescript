@@ -19,10 +19,9 @@ export default function App() {
       offset: 200,
     });
   }, [])
-  
+
   return (
     <>
-      <GlobalStyle />
       <ToggleDisplayProvider>
         <Header />
         <Hero />
@@ -32,6 +31,7 @@ export default function App() {
         <RenderMap></RenderMap>
         <UseContext></UseContext>
       </ToggleDisplayProvider>
+      <GlobalStyle />
     </>
   );
 }

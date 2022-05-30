@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   width: 100%;
   background: url(https://www.sonicthehedgehog.com/wp-content/uploads/2021/08/header-bg.gif);
   max-height: ${props => props.mobileWrapperLinks ? "100%" : "113px"};
-  color: white;
+  color: white !important;
   align-items: center;
   flex-direction: column;
   padding: 30px;
@@ -39,7 +39,7 @@ export const DivLogo = styled.div`
 `;
 
 export const WrapperLinks = styled.div`
-  color: #ffffff;
+  color: #ffffff !important;
   background: url(https://www.sonicthehedgehog.com/wp-content/uploads/2021/08/header-bg.gif);
   display: flex;
   flex-direction: column;
@@ -61,5 +61,10 @@ export const WrapperLinks = styled.div`
     text-align: left;
     width: auto;
     margin-top: 0px;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
   }
 `;
