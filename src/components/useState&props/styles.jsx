@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "../Button"
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -35,9 +36,6 @@ export const DivSonic = styled.div`
     gap: 10px;
     font-size: 1.1rem;
 
-    button{
-        height: 40px;
-    }
 
     @media screen and (min-width: 400px){
         flex-direction: row;
@@ -62,7 +60,7 @@ export function Numero(props){
     return (
         <DivSonic>
             <p>O sonicao ja foi virado: {(props.num) / 90} vezes</p>
-            <button onClick={()=> props.setNum(props.num+90)}> () ={">"} clique para virar sonicao</button>
+            <Button style={{backgroundColor: "#2991e6"}} onClick={()=> props.setNum(props.num+90)}> () ={">"} clique para virar sonicao</Button>
         </DivSonic>
     )
 }

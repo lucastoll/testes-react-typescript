@@ -40,7 +40,10 @@ export const Header = function () {
               <a href="#secao4">Renderização com .map</a>
             </li>
             <li>
-              <a href="#secao5">Use Context</a>
+              <a href="#secao5">Router</a>
+            </li>
+            <li>
+              <a href="#secao6">Use Context</a>
             </li>
           </WrapperLinks>
       </Wrapper>

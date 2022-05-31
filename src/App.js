@@ -10,6 +10,8 @@ import { ToggleDisplayProvider } from "./context/useToggleDisplay";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { useEffect } from "react";
+import TestRouter from "./components/TestRouter";
+import { Outlet } from "react-router-dom";
 
 export default function App() {
   useEffect(() => {
@@ -25,11 +27,13 @@ export default function App() {
       <ToggleDisplayProvider>
         <Header />
         <Hero />
-        <StatesProps></StatesProps>
-        <UseEffect></UseEffect>
-        <Formulario></Formulario>
-        <RenderMap></RenderMap>
-        <UseContext></UseContext>
+        <StatesProps />
+        <UseEffect />
+        <Formulario />
+        <RenderMap />
+        <TestRouter />
+        <UseContext />
+        <Outlet />
       </ToggleDisplayProvider>
       <GlobalStyle />
     </>

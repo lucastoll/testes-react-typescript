@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link, Titulo, Wrapper } from "../UseState&props/styles";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
+import { Button } from "../Button"
 
 
 const Form = styled.form`
@@ -39,16 +40,7 @@ const Form = styled.form`
   }
   `;
 
-  const Button = styled.button`
-  font-size: 16px;
-  margin: 4px 2px;
-  padding: 16px 32px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  background-color: #2991e6;
-  color: white;
-  border: 2px solid white;
-  `;
+
 
 export const Formulario = function () {
   const {display} = useToggleDisplayState();
@@ -82,7 +74,7 @@ export const Formulario = function () {
             placeholder="Digite o título da página"
             required
           />
-          <Button type="submit">Trocar titulo</Button>
+          <Button style={{backgroundColor: "#2991e6"}} type="submit">Trocar titulo</Button>
         </Form>
       </Wrapper>
       : null}

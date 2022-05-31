@@ -5,7 +5,7 @@ import {
     Route,
   } from "react-router-dom";
 import App from "./App";
-import Invoices from "./routes/invoices";
+import SonicEsperando from "./routes/sonicEsperando";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
@@ -13,8 +13,8 @@ const root = ReactDOM.createRoot(
 root.render(
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />}> 
-      </Route>
+      <Route path="testes-react" element={<App />} />
+      <Route path="sonicesperando" element={<SonicEsperando />} />
     </Routes>
   </BrowserRouter>
 );
