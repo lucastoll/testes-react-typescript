@@ -12,6 +12,7 @@ O site é separado por seções, onde eu apliquei algumas ferramentas da linguag
   <li>UseEffect observando a width da viewport do usuário.</li>
   <li>Formulário em React em conjunto com states.</li>
   <li>Carrousel e renderização com .map</li>
+  <li>React Router.</li>
   <li>UseContext para aplicar mudanças em todos os componentes do site.</li>
 </ul>
 
