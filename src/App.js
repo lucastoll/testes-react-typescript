@@ -1,16 +1,22 @@
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
+import { StatesProps } from "./components/UseState&props"
+import { UseEffect } from "./components/UseEffect"
+import { Formulario } from "./components/Formulario"
+import { RenderMap } from "./components/Render.map"
+import { TestRouter } from "./components/TestRouter"
+import { UseContext } from "./components/UseContext"
+
+
+
+
 import { GlobalStyle } from "./styles/GlobalStyle";
-import { StatesProps } from "./components/UseState&props";
-import { UseEffect } from "./components/UseEffect";
-import { Formulario } from "./components/Formulario";
-import { RenderMap } from "./components/Render.map";
-import { UseContext } from "./components/UseContext";
 import { ToggleDisplayProvider } from "./context/useToggleDisplay";
+
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+
 import { useEffect } from "react";
-import TestRouter from "./components/TestRouter";
 import { Outlet } from "react-router-dom";
 
 export default function App() {
