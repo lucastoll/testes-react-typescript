@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 
-import personagensSonic from "../../assets/personagensSonic.json"
+import personagensSonic from "../../assets/personagensSonicCarrossel.json"
 import { Link, Titulo } from "../UseState&props/styles";
 import Card from "./card";
 

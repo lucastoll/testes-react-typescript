@@ -18,6 +18,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
+import SearchFilter from "./components/SearchFilter";
 
 export default function App() {
   useEffect(() => {
@@ -38,6 +39,7 @@ export default function App() {
         <Formulario />
         <RenderMap />
         <TestRouter />
+        <SearchFilter />
         <UseContext />
         <Outlet />
       </ToggleDisplayProvider>

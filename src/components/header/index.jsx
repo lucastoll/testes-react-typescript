@@ -45,6 +45,9 @@ export const Header = function () {
             <li>
               <a href="#secao6">Use Context</a>
             </li>
+            <li>
+              <a href="#secao7">SearchFilter</a>
+            </li>
           </WrapperLinks>
       </Wrapper>
      : null}
