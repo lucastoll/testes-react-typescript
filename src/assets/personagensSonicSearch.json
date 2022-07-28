@@ -1,0 +1,75 @@
+[
+    {
+        "nome": "Sonic",
+        "categoria": "Ouriço",
+        "velocidade" : 10,
+        "forca" : 7
+    },
+    {
+        "nome": "Dr Eggman",
+        "categoria": "Humano",
+        "velocidade" : 3,
+        "forca" : 10 
+    },
+    {
+        "nome": "Metal Sonic",
+        "categoria": "Robô",
+        "velocidade" : 9,
+        "forca" : 8
+    },
+    {
+        "nome": "Amy Rose",
+        "categoria": "Ouriço",
+        "velocidade" : 7,
+        "forca" : 4
+    },
+    {
+        "nome": "Knuckles",
+        "categoria": "Ouriço",
+        "velocidade" : 7,
+        "forca" : 10
+    },
+    {
+        "nome": "Fang the sniper",
+        "categoria": "O resto",
+        "velocidade" : 1,
+        "forca" : 6
+    },
+    {
+        "nome": "Maria the robotnik",
+        "categoria": "Humano",
+        "velocidade" : 1,
+        "forca" : 8
+    },
+    {
+        "nome": "Charmy Bee",
+        "categoria": "O resto",
+        "velocidade" : 2,
+        "forca" : 2
+    },
+    {
+        "nome": "Shadow",
+        "categoria": "Ouriço",
+        "velocidade" : 9,
+        "forca" : 9
+    },
+    {
+        "nome": "Tails",
+        "categoria": "Ouriço",
+        "velocidade" : 8,
+        "forca" : 6
+    },
+    {
+        "nome": "Rouge the bat",
+        "categoria": "O resto",
+        "velocidade" : 7,
+        "forca" : 7
+    },
+    {
+        "nome": "E-123 Omega",
+        "categoria": "Robô",
+        "velocidade" : 1,
+        "forca" : 9
+    }
+    
+]
