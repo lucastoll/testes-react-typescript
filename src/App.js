@@ -7,9 +7,6 @@ import { RenderMap } from "./components/Render.map"
 import { TestRouter } from "./components/TestRouter"
 import { UseContext } from "./components/UseContext"
 
-
-
-
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { ToggleDisplayProvider } from "./context/useToggleDisplay";
 
