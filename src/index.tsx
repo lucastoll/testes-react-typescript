@@ -6,7 +6,7 @@ import {
     Route,
   } from "react-router-dom";
 import App from "./App";
-const { SonicEsperando } =  require("./routes/SonicEsperando");
+import SonicEsperando from "./routes/SonicEsperando";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

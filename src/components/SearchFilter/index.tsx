@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { Container, Link, Titulo, Wrapper } from "../UseState&props/styles";
 
+import personagensSonic from "../../assets/personagensSonicSearch.json";
 import { v4 as uuidv4 } from "uuid";
+import Card from "./card";
+
 
 import styled from "styled-components";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
-
-const personagensSonic = require("../../assets/personagensSonicSearch.json");
-const Card = require("./card");
-
 
 const NewWrapper = styled(Wrapper)`
   background: #c70000;
@@ -30,6 +29,7 @@ const CardWrapper = styled.div`
   justify-content: center;
   gap: 10px;
   max-width: 1100px;
+  padding: 0px 20px;
 `;
 
 const CategoryWrapper = styled.div`
@@ -41,7 +41,7 @@ const CategoryWrapper = styled.div`
   overflow-y: hidden;
 `;
 
-interface PropsCategory {
+interface PropsCategory{
   categoryStatus: string;
 }
 
@@ -84,7 +84,8 @@ export function SearchFilter() {
   const [orderStatus, setOrderStatus] = useState("");
   const [lista, setLista] = useState(personagensSonic);
 
-  function order(lista: any[]){            
+
+  function order(lista){            
     if(orderStatus === "")
       setLista(lista)
     else if(orderStatus === "velocidade")
@@ -193,7 +194,7 @@ export function SearchFilter() {
             <CardWrapper>
               {
               lista
-                .filter((val: { nome: string; }) => {
+                .filter((val) => {
                   if (searchBarStatus === "") {
                     return val;
                   } else if (
@@ -203,7 +204,7 @@ export function SearchFilter() {
                   }
                   return 0;
                 })
-                .map((val: any) => (
+                .map((val) => (
                   <Card
                     key={uuidv4()}
                     categoryStatus={categoryStatus}

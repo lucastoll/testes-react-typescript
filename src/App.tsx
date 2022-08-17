@@ -5,16 +5,16 @@ import { ToggleDisplayProvider } from "./context/useToggleDisplay";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 
-const { Header } = require("./components/Header");
-const { Hero } = require("./components/Hero");
-const { StatesProps } = require("./components/UseState&props");
-const { UseEffect } = require("./components/UseEffect");
-const { Formulario } = require("./components/Formulario");
-const { RenderMap } = require("./components/Render.map");
-const { TestRouter } = require("./components/TestRouter");
-const { UseContext } = require("./components/UseContext");
-const { SearchFilter } = require("./components/SearchFilter");
-const { GlobalStyle } = require("./styles/GlobalStyle");
+import { Header } from "./components/Header";
+import { Hero }  from "./components/Hero";
+import { StatesProps } from "./components/UseState&props";
+import { UseEffect } from "./components/UseEffect";
+import { Formulario } from "./components/Formulario";
+import { RenderMap } from "./components/Render.map";
+import { TestRouter } from "./components/TestRouter"; 
+import { UseContext } from "./components/UseContext"
+import { SearchFilter } from "./components/SearchFilter";
+import { GlobalStyle } from "./styles/GlobalStyle";
 
 
 export default function App() {

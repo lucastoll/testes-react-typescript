@@ -11,13 +11,17 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-const Wrapper = styled.div`
+interface PropsWrapper {
+    display: any;
+}
+
+const Wrapper = styled.div<PropsWrapper>`
 width: 100%;
 display: flex;
 padding: 50px 0px 70px 0px;
 flex-direction: column;
 align-items: center;
-background-color: #c70000;
+background-color: ${(props) => props.display ? "#c70000" : "#979797" };
 border-top: 10px solid #e0e000;
 color: white;
 > h2 {
@@ -68,7 +72,7 @@ export function RenderMap() {
     };
     
     return (
-    <Wrapper style={display ? null : {backgroundColor: '#979797'}}>
+    <Wrapper display={+display}> {/* fix error received true for a non-boolean attribute */}
       <Link id="secao4"></Link>
       {display ? <Titulo data-aos="zoom-in">Renderização com .map</Titulo> : <Titulo style={{color: '#000000'}}>?CONTEXTO?</Titulo>} 
       {display ? <h2 data-aos="zoom-in">Dado uma array personagensSonic[ ], a aplicação renderiza:</h2> : null}

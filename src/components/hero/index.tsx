@@ -11,8 +11,8 @@ export const Hero = function () {
     <>
     {display ?
       <Container>
+        <Link id="home"></Link>
         <Wrapper>
-          <Link id="home"></Link>
           <video src={gameplay} autoPlay loop muted />
           <img className="sonic" src={sonic} alt="" />
           <div className="overlay"></div>

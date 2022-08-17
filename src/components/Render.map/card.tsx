@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../../assets/render.map/logo.png";
-import contexto from "../../assets/render.map/contexto.jpg";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
+const logo =  require("../../assets/render.map/logo.png");
+const contexto = require("../../assets/render.map/contexto.jpg");
 
-const CardStyled = styled.div`
+interface PropsCardStyled{
+    display: any;
+}
+
+const CardStyled = styled.div<PropsCardStyled>`
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -75,7 +79,7 @@ export function Card({personagem}) {
                 <div className="DivTexto">{personagem.texto}</div>
             </CardStyled>
             : 
-            <CardStyled>
+            <CardStyled display={display}>
                 <div className="WrapperNome"><p>UseContext</p></div>
                 <img className="ImagemPersonagem" src={contexto} alt="" />
                 <div className="DivTexto">O contexto foi alterado.</div>

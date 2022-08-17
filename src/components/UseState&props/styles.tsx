@@ -45,6 +45,7 @@ export const DivSonic = styled.div`
 
     @media screen and (min-width: 400px){
         flex-direction: row;
+        padding: 0px 20px;
     }
 `
 

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
-const { Wrapper, Titulo, Link, Numero } = require ("./styles");
+const { Wrapper, Titulo, Link, Numero } = require("./styles");
 const sonica = require("../../assets/states&props/sonica.png");
 
 export const StatesProps = function () {
