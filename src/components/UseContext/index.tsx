@@ -1,8 +1,9 @@
-import { Wrapper, Titulo, Link } from "../UseState&props/styles"
+import React from "react";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 import { Button } from "../Button"
 import styled from 'styled-components';
 
+const { Wrapper, Titulo, Link } = require("../UseState&props/styles");
 
 const P = styled.p`
     color: white;

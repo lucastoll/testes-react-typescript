@@ -4,7 +4,7 @@ import { useToggleDisplayState } from "../../context/useToggleDisplay";
 
 import personagensSonic from "../../assets/personagensSonicCarrossel.json"
 import { Link, Titulo } from "../UseState&props/styles";
-import Card from "./card";
+import { Card } from "./card";
 
 import { v4 as uuidv4} from 'uuid'
 import Slider from "react-slick";
@@ -84,6 +84,5 @@ export function RenderMap() {
     </Wrapper>
     );
   }
-
 
 

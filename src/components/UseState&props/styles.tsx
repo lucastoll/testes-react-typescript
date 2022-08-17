@@ -1,5 +1,11 @@
+import React from "react";
 import styled from "styled-components";
 import { Button } from "../Button"
+
+interface Props{
+    num: number;
+    setNum: React.Dispatch<React.SetStateAction<number>>;
+}
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -56,11 +62,11 @@ export const Container = styled.div`
 `
 
  
-export function Numero(props){
+export function Numero({num, setNum} : Props){
     return (
         <DivSonic>
-            <p>O sonicao ja foi virado: {(props.num) / 90} vezes</p>
-            <Button style={{backgroundColor: "#2991e6"}} onClick={()=> props.setNum(props.num+90)}> () ={">"} clique para virar sonicao</Button>
+            <p>O sonicao ja foi virado: {(num) / 90} vezes</p>
+            <Button style={{backgroundColor: "#2991e6"}} onClick={()=> setNum(num+90)}> () ={">"} clique para virar sonicao</Button>
         </DivSonic>
     )
 }

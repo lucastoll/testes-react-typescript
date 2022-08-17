@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
-import imgMobile from "../../assets/useEffect/mobile.png"
-import imgTablet from "../../assets/useEffect/tablet.png"
 import styled from "styled-components";
-import { Container, Link, Titulo, Wrapper } from "../UseState&props/styles";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 
+const imgMobile = require("../../assets/useEffect/mobile.png");
+const imgTablet = require("../../assets/useEffect/tablet.png");
+const { Container, Link, Titulo, Wrapper } = require("../UseState&props/styles");
 
 const Espaco = styled.div`
   margin-bottom: 0px;
 `
 export const UseEffect = function () {
   const {display} = useToggleDisplayState();
-  const [width, setWidth] = useState();
+  const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     setWidth(window.innerWidth)

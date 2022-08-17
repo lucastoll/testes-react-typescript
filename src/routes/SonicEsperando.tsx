@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { HashLink } from 'react-router-hash-link';
 import styled from "styled-components"
-import { GlobalStyle } from '../styles/GlobalStyle'
-import GifSonicEsperando from "../assets/router/waiting.gif"
-import BalaoFala from "../assets/router/balao.png"
+const { GlobalStyle } = require('../styles/GlobalStyle');
+const { GifSonicEsperando } = require("../assets/router/waiting.gif");
+const { BalaoFala } = require("../assets/router/balao.png");
 
 
 const SonicFeio = styled.div`

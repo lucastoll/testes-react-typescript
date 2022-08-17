@@ -61,7 +61,7 @@ position: relative;
 }
 `;
 
-const Card = ({personagem}) => {
+export function Card({personagem}) {
     const {display} = useToggleDisplayState();
 
     return (
@@ -85,4 +85,3 @@ const Card = ({personagem}) => {
     )
 }
 
-export default Card;

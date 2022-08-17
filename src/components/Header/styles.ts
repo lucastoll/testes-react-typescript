@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+interface Props {
+  mobileWrapperLinks: boolean;
+}
+
+
+export const Wrapper = styled.div<Props>`
   display: flex;
   width: 100%;
   background: url(https://www.sonicthehedgehog.com/wp-content/uploads/2021/08/header-bg.gif);
@@ -9,11 +14,12 @@ export const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 30px;
+  gap: 40px;
   position: fixed;
   z-index: 99;
   transition: max-height 1s linear;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -29,7 +35,7 @@ export const DivLogo = styled.div`
     height: 50px;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
   .hamburguer{
     display: none;
   }
@@ -51,7 +57,7 @@ export const WrapperLinks = styled.div`
   justify-content: flex-start;
   margin-top: 20px;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -66,5 +72,8 @@ export const WrapperLinks = styled.div`
   a{
     text-decoration: none;
     color: white;
+    white-space: nowrap;
+    max-width: 50px;
+    overflow-x: hidden;
   }
 `;

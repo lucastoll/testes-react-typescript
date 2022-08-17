@@ -1,7 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
-const Container = styled.div`
+interface Props {
+  key: any;
+  categoryStatus: string;
+  personagem: any;
+}
+
+interface PropsContainer {
+  categoryStatus: string;
+  category: any;
+}
+
+const Container = styled.div<PropsContainer>`
   display: ${(props) =>
     props.categoryStatus === props.category || props.categoryStatus === ""
       ? "flex"
@@ -27,7 +38,7 @@ const Container = styled.div`
   }
 `;
 
-export default function Card({ personagem, categoryStatus }) {
+export default function Card({ personagem, categoryStatus } : Props) {
   return (
     <Container categoryStatus={categoryStatus} category={personagem.categoria}>
       <div className="name">{personagem.nome}</div>

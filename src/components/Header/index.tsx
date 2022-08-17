@@ -26,7 +26,7 @@ export const Header = function () {
           alt="" 
           />
         </DivLogo>
-        <WrapperLinks mobileWrapperLinks={mobileWrapperLinks}>
+        <WrapperLinks>
             <li>
               <a href="#secao1">States e Props</a>
             </li>

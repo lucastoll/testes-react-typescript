@@ -1,11 +1,9 @@
-import { Wrapper, Container, Link } from "./styles";
-import sonic from "../../assets/hero/sonic.gif";
-import styles from "./style.module.css";
 import React from "react";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
-import gameplay from "../../assets/hero/gameplay.mp4"
 
-
+const { Wrapper, Container, Link } = require("./styles");
+const sonic = require("../../assets/hero/sonic.gif");
+const gameplay = require("../../assets/hero/gameplay.mp4");
 
 export const Hero = function () {
   const {display} = useToggleDisplayState();
@@ -16,7 +14,7 @@ export const Hero = function () {
         <Wrapper>
           <Link id="home"></Link>
           <video src={gameplay} autoPlay loop muted />
-          <img className={styles.sonic} src={sonic} alt="" />
+          <img className="sonic" src={sonic} alt="" />
           <div className="overlay"></div>
         </Wrapper>
       </Container>

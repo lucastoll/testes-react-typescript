@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { Link, Titulo, Wrapper } from "../UseState&props/styles";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
+import React, { useState } from "react";
 import { Button } from "../Button"
+
+import styled from "styled-components";
+const { Link, Titulo, Wrapper } = require("../UseState&props/styles");
 
 
 const Form = styled.form`
@@ -47,12 +48,12 @@ export const Formulario = function () {
     const [text, setText] = useState("sonic");
     const [nome, setNome] = useState("sonic");
     
-    function trocaTitulo(event) {
+    function trocaTitulo(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
         setNome(text)
       }
     
-    function handleChange(event) {
+    function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
         setText(event.target.value);
     }
     
@@ -67,7 +68,7 @@ export const Formulario = function () {
           <input
             type="text"
             value={text}
-            maxLength="20"
+            maxLength={20}
             onChange={(event) => {
               handleChange(event);
             }}

@@ -1,3 +1,4 @@
+import React from "react";
 import ReactDOM from "react-dom/client";
 import {
     BrowserRouter,
@@ -5,10 +6,10 @@ import {
     Route,
   } from "react-router-dom";
 import App from "./App";
-import SonicEsperando from "./routes/sonicEsperando";
+const { SonicEsperando } =  require("./routes/SonicEsperando");
 
 const root = ReactDOM.createRoot(
-  document.getElementById("root")
+  document.getElementById("root") as HTMLElement
 );
 root.render(
     <BrowserRouter>

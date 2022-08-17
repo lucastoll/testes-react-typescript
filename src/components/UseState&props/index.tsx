@@ -1,13 +1,14 @@
-import { Wrapper, Titulo, Link, Numero } from "./styles";
 import React, {useState, useEffect} from "react";
-import sonica from "../../assets/states&props/sonica.png"
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+
+const { Wrapper, Titulo, Link, Numero } = require ("./styles");
+const sonica = require("../../assets/states&props/sonica.png");
 
 export const StatesProps = function () {
   const {display} = useToggleDisplayState();
   const [num, setNum] = useState(0);
-  const [width, setWidth] = useState();
+  const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     setWidth(window.innerWidth)

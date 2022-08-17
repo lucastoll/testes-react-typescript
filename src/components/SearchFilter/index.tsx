@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Container, Link, Titulo, Wrapper } from "../UseState&props/styles";
 
-import personagensSonic from "../../assets/personagensSonicSearch.json";
 import { v4 as uuidv4 } from "uuid";
-import Card from "./card";
-
 
 import styled from "styled-components";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
+
+const personagensSonic = require("../../assets/personagensSonicSearch.json");
+const Card = require("./card");
+
 
 const NewWrapper = styled(Wrapper)`
   background: #c70000;
@@ -40,7 +41,11 @@ const CategoryWrapper = styled.div`
   overflow-y: hidden;
 `;
 
-const Category = styled.div`
+interface PropsCategory {
+  categoryStatus: string;
+}
+
+const Category = styled.div<PropsCategory>`
   width: 100px;
   height: 30px;
   border: 2px solid white;
@@ -57,7 +62,11 @@ const OrderWrapper = styled.div`
   gap: 20px;
 `;
 
-const OrderCategory = styled.div`
+interface PropsOrderCategory{
+  orderStatus: string;
+}
+
+const OrderCategory = styled.div<PropsOrderCategory>`
   width: 100px;
   height: 30px;
   border: 2px solid white;
@@ -67,7 +76,7 @@ const OrderCategory = styled.div`
   color: white;
 `;
 
-export default function SearchFilter() {
+export function SearchFilter() {
   const { display } = useToggleDisplayState();
 
   const [searchBarStatus, setSearchBarStatus] = useState("");
@@ -75,9 +84,7 @@ export default function SearchFilter() {
   const [orderStatus, setOrderStatus] = useState("");
   const [lista, setLista] = useState(personagensSonic);
 
-
-
-  function order(lista){            
+  function order(lista: any[]){            
     if(orderStatus === "")
       setLista(lista)
     else if(orderStatus === "velocidade")
@@ -109,9 +116,9 @@ export default function SearchFilter() {
                 id="Ouriço"
                 categoryStatus={categoryStatus}
                 onClick={(event) =>
-                  categoryStatus === event.target.id
+                  categoryStatus === (event.target as HTMLElement).id
                     ? setCategoryStatus("")
-                    : setCategoryStatus(event.target.id)
+                    : setCategoryStatus((event.target as HTMLElement).id)
                 }
               >
                 Ouriço
@@ -120,9 +127,9 @@ export default function SearchFilter() {
                 id="Humano"
                 categoryStatus={categoryStatus}
                 onClick={(event) =>
-                  categoryStatus === event.target.id
+                  categoryStatus === (event.target as HTMLElement).id
                     ? setCategoryStatus("")
-                    : setCategoryStatus(event.target.id)
+                    : setCategoryStatus((event.target as HTMLElement).id)
                 }
               >
                 Humano
@@ -131,9 +138,9 @@ export default function SearchFilter() {
                 id="Robô"
                 categoryStatus={categoryStatus}
                 onClick={(event) =>
-                  categoryStatus === event.target.id
+                  categoryStatus === (event.target as HTMLElement).id
                     ? setCategoryStatus("")
-                    : setCategoryStatus(event.target.id)
+                    : setCategoryStatus((event.target as HTMLElement).id)
                 }
               >
                 Robô
@@ -142,9 +149,9 @@ export default function SearchFilter() {
                 id="O resto"
                 categoryStatus={categoryStatus}
                 onClick={(event) =>
-                  categoryStatus === event.target.id
+                  categoryStatus === (event.target as HTMLElement).id
                     ? setCategoryStatus("")
-                    : setCategoryStatus(event.target.id)
+                    : setCategoryStatus((event.target as HTMLElement).id)
                 }
               >
                 O resto
@@ -160,9 +167,9 @@ export default function SearchFilter() {
                 id="velocidade"
                 orderStatus={orderStatus}
                 onClick={(event) => {
-                  orderStatus === event.target.id
+                  orderStatus === (event.target as HTMLElement).id
                     ? setOrderStatus("")
-                    : setOrderStatus(event.target.id);
+                    : setOrderStatus((event.target as HTMLElement).id)
                     order(lista)
                 }
                 }
@@ -173,9 +180,9 @@ export default function SearchFilter() {
                 id="forca"
                 orderStatus={orderStatus}
                 onClick={(event) => {
-                  orderStatus === event.target.id
+                  orderStatus === (event.target as HTMLElement).id
                     ? setOrderStatus("")
-                    : setOrderStatus(event.target.id);
+                    : setOrderStatus((event.target as HTMLElement).id)
                     order(lista)
                 }
                 }
@@ -186,7 +193,7 @@ export default function SearchFilter() {
             <CardWrapper>
               {
               lista
-                .filter((val) => {
+                .filter((val: { nome: string; }) => {
                   if (searchBarStatus === "") {
                     return val;
                   } else if (
@@ -196,7 +203,7 @@ export default function SearchFilter() {
                   }
                   return 0;
                 })
-                .map((val) => (
+                .map((val: any) => (
                   <Card
                     key={uuidv4()}
                     categoryStatus={categoryStatus}
