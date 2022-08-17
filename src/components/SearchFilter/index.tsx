@@ -1,80 +1,12 @@
 import React, { useState } from "react";
-import { Container, Link, Titulo, Wrapper } from "../UseState&props/styles";
+import {  Link, Titulo } from "../UseState&props/styles";
 
 import personagensSonic from "../../assets/personagensSonicSearch.json";
 import { v4 as uuidv4 } from "uuid";
 import Card from "./card";
 
-
-import styled from "styled-components";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
-
-const NewWrapper = styled(Wrapper)`
-  background: #c70000;
-`;
-
-const SearchBar = styled.input`
-  min-width: 200px;
-  max-width: 300px;
-  width: 100%;
-  height: 30px;
-  padding: 5px;
-`;
-
-const CardWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-
-  justify-content: center;
-  gap: 10px;
-  max-width: 1100px;
-  padding: 0px 20px;
-`;
-
-const CategoryWrapper = styled.div`
-  display: flex;
-  padding: 0 10px;
-  justify-content: center;
-  width: 100%;
-  gap: 20px;
-  overflow-y: hidden;
-`;
-
-interface PropsCategory{
-  categoryStatus: string;
-}
-
-const Category = styled.div<PropsCategory>`
-  width: 100px;
-  height: 30px;
-  border: 2px solid white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background: ${(props) =>
-    props.categoryStatus === props.id ? "blue" : "transparent"};
-`;
-
-const OrderWrapper = styled.div`
-  display: flex;
-  gap: 20px;
-`;
-
-interface PropsOrderCategory{
-  orderStatus: string;
-}
-
-const OrderCategory = styled.div<PropsOrderCategory>`
-  width: 100px;
-  height: 30px;
-  border: 2px solid white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-`;
+import { CardWrapper, Category, CategoryWrapper, NewContainer, NewWrapper, OrderCategory, OrderWrapper, SearchBar } from "./styles";
 
 export function SearchFilter() {
   const { display } = useToggleDisplayState();
@@ -83,7 +15,6 @@ export function SearchFilter() {
   const [categoryStatus, setCategoryStatus] = useState("");
   const [orderStatus, setOrderStatus] = useState("");
   const [lista, setLista] = useState(personagensSonic);
-
 
   function order(lista){            
     if(orderStatus === "")
@@ -99,7 +30,7 @@ export function SearchFilter() {
       {
         display ? 
         <NewWrapper>
-          <Container style={{ width: "100%", gap: "20px" }}>
+          <NewContainer>
             <Titulo>
               SearchFilter
               <Link id="secao7"></Link>
@@ -212,7 +143,7 @@ export function SearchFilter() {
                   />
                 ))}
             </CardWrapper>
-          </Container>
+          </NewContainer>
         </NewWrapper>
         : null
       }

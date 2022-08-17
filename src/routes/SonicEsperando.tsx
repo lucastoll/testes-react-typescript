@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { HashLink } from 'react-router-hash-link';
 import styled from "styled-components"
-const { GlobalStyle } = require('../styles/GlobalStyle');
-const { GifSonicEsperando } = require("../assets/router/waiting.gif");
-const { BalaoFala } = require("../assets/router/balao.png");
+
+// @ts-ignore
+import  GifSonicEsperando from "../assets/router/waiting.gif";
+// @ts-ignore
+import BalaoFala from "../assets/router/balao.png";
+
+import { GlobalStyle } from "../styles/GlobalStyle";
 
 
 const SonicFeio = styled.div`
@@ -107,7 +111,7 @@ useEffect(()=> {
   
 
   return (
-    <HashLink to="/testes-react#secao6">
+    <HashLink to="/testes-react-typescript#secao6">
         <SonicFeio>
             <h2 id="hash">Você entrou na página do sonic esperando!!!</h2>
             <div>

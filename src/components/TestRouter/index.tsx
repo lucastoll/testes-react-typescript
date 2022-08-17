@@ -1,9 +1,10 @@
 import React from 'react'
-import { Button } from '../Button';
 import { Link as LinkRouter } from 'react-router-dom';
 import { useToggleDisplayState } from '../../context/useToggleDisplay';
+import { NewButton, NewWrapper } from './styles';
 
-const { Container, Link, Titulo, Wrapper } =  require("../UseState&props/styles");
+const { Container, Link, Titulo } =  require("../UseState&props/styles");
+
 
 export function TestRouter() {
   const {display} = useToggleDisplayState();
@@ -11,7 +12,7 @@ export function TestRouter() {
   return (
     <>
       {display ?      
-        <Wrapper style={{background: '#2991e6'}}>
+        <NewWrapper style={{background: '#2991e6'}}>
           <Link id="secao5"></Link>
           <Titulo data-aos="slide-up">Router</Titulo>
           <h2 data-aos="slide-up" style={{color: "#ffffff", maxWidth: "650px", width: "70%", marginBottom: "20px"}}>
@@ -19,10 +20,10 @@ export function TestRouter() {
           </h2>
           <Container data-aos="slide-up">
               <LinkRouter to="/sonicesperando">
-                  <Button style={{backgroundColor: "#2991e6"}}>Trocar página</Button>     
+                  <NewButton>Trocar página</NewButton>     
               </LinkRouter>
           </Container>
-        </Wrapper>
+        </NewWrapper>
       : null}    
     </>
   )

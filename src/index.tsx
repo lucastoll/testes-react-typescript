@@ -12,9 +12,9 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-    <BrowserRouter>
+  <BrowserRouter>
     <Routes>
-      <Route path="testes-react" element={<App />} />
+      <Route path="testes-react-typescript" element={<App />} />
       <Route path="sonicesperando" element={<SonicEsperando />} />
     </Routes>
   </BrowserRouter>

@@ -1,9 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 
 import personagensSonic from "../../assets/personagensSonicCarrossel.json"
-import { Link, Titulo } from "../UseState&props/styles";
 import { Card } from "./card";
 
 import { v4 as uuidv4} from 'uuid'
@@ -11,52 +9,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-interface PropsWrapper {
-    display: any;
-}
+import { CarouselContainer, NewTitulo, Wrapper } from "./styles";
+import { Link, Titulo } from "../UseState&props/styles";
 
-const Wrapper = styled.div<PropsWrapper>`
-width: 100%;
-display: flex;
-padding: 50px 0px 70px 0px;
-flex-direction: column;
-align-items: center;
-background-color: ${(props) => props.display ? "#c70000" : "#979797" };
-border-top: 10px solid #e0e000;
-color: white;
-> h2 {
-    margin: 15px;
-    text-align: center;
-}
-position: relative;
-`;
 
-const CarouselContainer = styled.div`
-width: 250px;
-margin-top: 20px;
-
-.slick-dots li button:before{
-  color: white;
-  opacity: 0.5;
-  font-size: 12px;
-}
-
-.slick-dots li button:hover:before{
-    opacity: 0.75;
-}
-
-.slick-dots li.slick-active button:before{
-    opacity: 0.9;
-}
-
-.slick-prev:before, .slick-next:before{
-   font-size: 30px;
-}
-
-.slick-prev{
-    left: -35px;
-}
-`;
 
 
 export function RenderMap() {
@@ -74,7 +30,7 @@ export function RenderMap() {
     return (
     <Wrapper display={+display}> {/* fix error received true for a non-boolean attribute */}
       <Link id="secao4"></Link>
-      {display ? <Titulo data-aos="zoom-in">Renderização com .map</Titulo> : <Titulo style={{color: '#000000'}}>?CONTEXTO?</Titulo>} 
+      {display ? <Titulo data-aos="zoom-in">Renderização com .map</Titulo> : <NewTitulo>?CONTEXTO?</NewTitulo>} 
       {display ? <h2 data-aos="zoom-in">Dado uma array personagensSonic[ ], a aplicação renderiza:</h2> : null}
         <CarouselContainer data-aos="zoom-in">
             <Slider {...settings}>

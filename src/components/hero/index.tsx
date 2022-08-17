@@ -5,7 +5,7 @@ const { Wrapper, Container, Link } = require("./styles");
 const sonic = require("../../assets/hero/sonic.gif");
 const gameplay = require("../../assets/hero/gameplay.mp4");
 
-export const Hero = function () {
+export function Hero () {
   const {display} = useToggleDisplayState();
   return (
     <>

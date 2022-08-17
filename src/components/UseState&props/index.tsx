@@ -17,7 +17,7 @@ export const StatesProps = function () {
     })
   }, [width])
 
-  const styles = {
+  const styles = { /* Exemplo styles em objeto.  */
       sonicaImg :{
         transform: `rotate(${num}deg)`,
         width: '18.75rem'
