@@ -14,6 +14,7 @@ O site é separado por seções, onde eu apliquei algumas ferramentas da linguag
   <li>Carrousel e renderização com .map</li>
   <li>React Router.</li>
   <li>UseContext para aplicar mudanças em todos os componentes do site.</li>
+  <li>Seção com barra de pesquisa e filtros em uma lista de items.</li>
 </ul>
 
 Além disso, utilizei a biblioteca AOS para fazer animações onscroll.
