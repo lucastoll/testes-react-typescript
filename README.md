@@ -5,7 +5,7 @@ Link: https://lucastoll.github.io/testes-react-typescript/
 
 https://user-images.githubusercontent.com/86172649/169376617-b628b5a0-bc65-4316-91f7-f6c4047a001e.mp4
 
-O site é separado por seções, onde eu apliquei algumas ferramentas da linguagens pela primeira vez em cada seção para colocar em prática o estudo teórico, as seções são:
+O site é separado por seções, onde eu apliquei algumas ferramentas do react pela primeira vez em cada seção para colocar em prática o estudo teórico, as seções são:
 
 <ul>
   <li>States & Props</li>
