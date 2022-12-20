@@ -1,6 +1,5 @@
 import styled from "styled-components";
-const { Wrapper, Container } = require("../UseState&props/styles");
-
+import { Wrapper, Container } from "../UseState&props/styles";
 
 export const NewWrapper = styled(Wrapper)`
   background: #c70000;

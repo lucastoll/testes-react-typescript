@@ -16,7 +16,6 @@ import { UseContext } from "./components/UseContext"
 import { SearchFilter } from "./components/SearchFilter";
 import { GlobalStyle } from "./styles/GlobalStyle";
 
-
 export default function App() {
   useEffect(() => {
     AOS.init({

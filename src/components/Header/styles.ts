@@ -4,7 +4,6 @@ interface Props {
   mobileWrapperLinks: boolean;
 }
 
-
 export const Wrapper = styled.div<Props>`
   display: flex;
   width: 100%;

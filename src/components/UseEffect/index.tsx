@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 import { NewContainer, NewWrapper } from "./styles";
-
-const imgMobile = require("../../assets/useEffect/mobile.png");
-const imgTablet = require("../../assets/useEffect/tablet.png");
-const { Link, Titulo } = require("../UseState&props/styles");
+import imgMobile from "../../assets/useEffect/mobile.png";
+import imgTablet from "../../assets/useEffect/tablet.png";
+import { Link, Titulo } from "../UseState&props/styles";
 
 export const UseEffect = function () {
   const {display} = useToggleDisplayState();

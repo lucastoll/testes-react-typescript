@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { HashLink } from 'react-router-hash-link';
 import styled from "styled-components"
-
-// @ts-ignore
 import  GifSonicEsperando from "../assets/router/waiting.gif";
-// @ts-ignore
 import BalaoFala from "../assets/router/balao.png";
-
 import { GlobalStyle } from "../styles/GlobalStyle";
 
 

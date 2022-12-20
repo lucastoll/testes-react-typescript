@@ -2,9 +2,7 @@ import React from 'react'
 import { Link as LinkRouter } from 'react-router-dom';
 import { useToggleDisplayState } from '../../context/useToggleDisplay';
 import { NewButton, NewWrapper } from './styles';
-
-const { Container, Link, Titulo } =  require("../UseState&props/styles");
-
+import { Container, Link, Titulo } from "../UseState&props/styles";
 
 export function TestRouter() {
   const {display} = useToggleDisplayState();

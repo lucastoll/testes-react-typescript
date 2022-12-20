@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { Button } from '../Button';
-const { Wrapper } =  require("../UseState&props/styles");
-
+import { Wrapper } from "../UseState&props/styles";
 
 export const NewWrapper = styled(Wrapper)`
   background: #2991e6

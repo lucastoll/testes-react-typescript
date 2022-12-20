@@ -3,8 +3,8 @@ import React from "react";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 import { CardStyled } from "./stylesCard";
 
-const logo =  require("../../assets/render.map/logo.png");
-const contexto = require("../../assets/render.map/contexto.jpg");
+import logo from "../../assets/render.map/logo.png";
+import contexto from "../../assets/render.map/contexto.jpg";
 
 export function Card({personagem}) {
     const {display} = useToggleDisplayState();

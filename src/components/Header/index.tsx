@@ -2,7 +2,6 @@ import { Wrapper, DivLogo, WrapperLinks } from "./styles";
 import React, { useState } from "react";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 
-
 export const Header = function () {
   const {display} = useToggleDisplayState();
   const [mobileWrapperLinks, setMobileWrapperLinks] = useState(false);

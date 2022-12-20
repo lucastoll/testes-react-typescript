@@ -12,9 +12,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { CarouselContainer, NewTitulo, Wrapper } from "./styles";
 import { Link, Titulo } from "../UseState&props/styles";
 
-
-
-
 export function RenderMap() {
     const {display} = useToggleDisplayState();
 

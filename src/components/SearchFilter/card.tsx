@@ -7,7 +7,6 @@ interface Props {
   personagem: any;
 }
 
-
 export default function Card({ personagem, categoryStatus } : Props) {
   return (
     <Container categoryStatus={categoryStatus} category={personagem.categoria}>

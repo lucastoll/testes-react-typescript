@@ -1,9 +1,7 @@
 import React from "react";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 import { NewButton, NewWrapper, P } from "./styles";
-
-const { Titulo, Link } = require("../UseState&props/styles");
-
+import { Titulo, Link } from "../UseState&props/styles";
 
 export const UseContext = function () {
     const {display, setDisplay} = useToggleDisplayState();

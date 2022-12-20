@@ -1,9 +1,9 @@
 import React from "react";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
+import { Wrapper, Container, Link } from "./styles";
 
-const { Wrapper, Container, Link } = require("./styles");
-const sonic = require("../../assets/hero/sonic.gif");
-const gameplay = require("../../assets/hero/gameplay.mp4");
+import sonic from "../../assets/hero/sonic.gif";
+import gameplay from "../../assets/hero/gameplay.mp4";
 
 export function Hero () {
   const {display} = useToggleDisplayState();
