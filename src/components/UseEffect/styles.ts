@@ -12,4 +12,4 @@ export const NewContainer = styled(Container)`
   @media screen and (min-width: 768px) {
     margin-bottom: 0px;
   }
-`
+`;

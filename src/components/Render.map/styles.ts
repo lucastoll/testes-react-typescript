@@ -1,9 +1,9 @@
-import styled from "styled-components"
+import styled from "styled-components";
 import { Titulo } from "../UseState&props/styles";
 
 
 interface PropsWrapper {
-    display: any;
+    display: boolean | number;
 }
 
 export const Wrapper = styled.div<PropsWrapper>`

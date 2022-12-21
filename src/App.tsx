@@ -12,34 +12,34 @@ import { UseEffect } from "./components/UseEffect";
 import { Formulario } from "./components/Formulario";
 import { RenderMap } from "./components/Render.map";
 import { TestRouter } from "./components/TestRouter"; 
-import { UseContext } from "./components/UseContext"
+import { UseContext } from "./components/UseContext";
 import { SearchFilter } from "./components/SearchFilter";
 import { GlobalStyle } from "./styles/GlobalStyle";
 
 export default function App() {
-  useEffect(() => {
-    AOS.init({
-      duration: 2000,
-      once: true,
-      offset: 200,
-    });
-  }, []);
+	useEffect(() => {
+		AOS.init({
+			duration: 2000,
+			once: true,
+			offset: 200,
+		});
+	}, []);
 
-  return (
-    <>
-      <ToggleDisplayProvider>
-        <Header />
-        <Hero />
-        <StatesProps />
-        <UseEffect />
-        <Formulario />
-        <RenderMap />
-        <TestRouter />
-        <SearchFilter />
-        <UseContext />
-        <Outlet />
-      </ToggleDisplayProvider>
-      <GlobalStyle />
-    </>
-  );
+	return (
+		<>
+			<ToggleDisplayProvider>
+				<Header />
+				<Hero />
+				<StatesProps />
+				<UseEffect />
+				<Formulario />
+				<RenderMap />
+				<TestRouter />
+				<SearchFilter />
+				<UseContext />
+				<Outlet />
+			</ToggleDisplayProvider>
+			<GlobalStyle />
+		</>
+	);
 }

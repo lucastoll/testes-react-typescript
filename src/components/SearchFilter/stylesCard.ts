@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 interface PropsContainer {
     categoryStatus: string;
-    category: any;
+    category: string;
   }
   
 export const Container = styled.div<PropsContainer>`
 display: ${(props) =>
-    props.categoryStatus === props.category || props.categoryStatus === ""
-    ? "flex"
-    : "none"};
+		props.categoryStatus === props.category || props.categoryStatus === ""
+			? "flex"
+			: "none"};
 flex-direction: column;
 border: 3px solid white;
 color: white;

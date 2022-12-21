@@ -9,7 +9,7 @@ export const NewWrapper = styled(Wrapper)`
 export const NewContainer = styled(Container)`
   width: 100%;
   gap: 20px;
-`
+`;
 
 export const SearchBar = styled.input`
   min-width: 200px;
@@ -52,7 +52,7 @@ export const Category = styled.div<PropsCategory>`
   justify-content: center;
   color: white;
   background: ${(props) =>
-    props.categoryStatus === props.id ? "blue" : "transparent"};
+		props.categoryStatus === props.id ? "blue" : "transparent"};
 `;
 
 export const OrderWrapper = styled.div`

@@ -1,7 +1,7 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 interface PropsCardStyled{
-    display: any;
+    display: number | boolean | undefined;
 }
 
 export const CardStyled = styled.div<PropsCardStyled>`
@@ -12,15 +12,15 @@ justify-content: flex-start;
 width: 100%;
 height: 450px;
 background: #eff7f9;
-border: ${props => props.display ? '10px solid #012d6c' : '10px solid #000000'};
+border: ${props => props.display ? "10px solid #012d6c" : "10px solid #000000"};
 border-radius: 32px;
-color: ${props => props.display ? '#012d6c' : '#000000'};
+color: ${props => props.display ? "#012d6c" : "#000000"};
 padding: 10px;
 gap: 20px;
 position: relative;
 
 .WrapperNome{
-    background: ${props => props.display ? '#012d6c' : '#000000'};
+    background: ${props => props.display ? "#012d6c" : "#000000"};
     clip-path: polygon(25% 0%, 100% 0%, 83% 99%, 0 100%);
     color: white;
     font-family: sans-serif;
@@ -47,13 +47,13 @@ position: relative;
 .ImagemPersonagem{
     width: 80%;
     height: 200px;
-    border: ${props => props.display ? '' : '5px solid #000000'};
+    border: ${props => props.display ? "" : "5px solid #000000"};
 }
 
 .DivTexto{
     width: 90%;
     height: 100px;
-    border: ${props => props.display ? '5px solid #012d6c' : '5px solid #000000'};
+    border: ${props => props.display ? "5px solid #012d6c" : "5px solid #000000"};
     font-size: 18px;
     padding: 4px;
     font-family: sans-serif;

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { Button } from "../Button"
+import styled from "styled-components";
+import { Button } from "../Button";
 import { Wrapper } from "../UseState&props/styles";
 
 export const NewWrapper = styled(Wrapper)`

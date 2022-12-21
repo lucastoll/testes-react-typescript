@@ -1,15 +1,14 @@
-import { Button } from "../Button"
-
+import { Button } from "../Button";
 import styled from "styled-components";
 import { Wrapper } from "../UseState&props/styles";
 
 export const NewWrapper = styled(Wrapper)`
   background-color: #2991e6;
-`
+`;
 
 export const NewButton = styled(Button)`
   background-color: #2991e6;
-`
+`;
 
 export const Form = styled.form`
   width: fit-content;

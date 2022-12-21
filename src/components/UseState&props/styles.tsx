@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "../Button"
+import { Button } from "../Button";
 
 interface Props{
     num: number;
@@ -47,7 +47,7 @@ export const DivSonic = styled.div`
         flex-direction: row;
         padding: 0px 20px;
     }
-`
+`;
 
 export const Container = styled.div`
     display: flex;
@@ -60,14 +60,14 @@ export const Container = styled.div`
         max-width: 300px;
         width: 100%;
     }
-`
+`;
 
  
 export function Numero({num, setNum} : Props){
-    return (
-        <DivSonic>
-            <p>O sonicao ja foi virado: {(num) / 90} vezes</p>
-            <Button style={{backgroundColor: "#2991e6"}} onClick={()=> setNum(num+90)}> () ={">"} clique para virar sonicao</Button>
-        </DivSonic>
-    )
+	return (
+		<DivSonic>
+			<p>O sonicao ja foi virado: {(num) / 90} vezes</p>
+			<Button style={{backgroundColor: "#2991e6"}} onClick={()=> setNum(num+90)}> () ={">"} clique para virar sonicao</Button>
+		</DivSonic>
+	);
 }
