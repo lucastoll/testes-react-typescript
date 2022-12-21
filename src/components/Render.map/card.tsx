@@ -1,8 +1,8 @@
-import React from "react";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 import { CardStyled } from "./stylesCard";
 import logo from "../../assets/render.map/logo.png";
 import contexto from "../../assets/render.map/contexto.jpg";
+import React from "react";
 
 interface Props {
     nome: string;

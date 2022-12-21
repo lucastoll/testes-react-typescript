@@ -1,7 +1,7 @@
 import React from "react";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 
-import personagensSonic from "../../assets/personagensSonicCarrossel.json";
+import personagensSonic from "../../assets/render.map/personagensSonicCarrossel.json";
 import { Card } from "./card";
 
 import { v4 as uuidv4} from "uuid";
