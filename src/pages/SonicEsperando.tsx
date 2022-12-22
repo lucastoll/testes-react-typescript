@@ -107,7 +107,7 @@ export default function SonicEsperando() {
   
 
 	return (
-		<HashLink to="/testes-react-typescript#secao6">
+		<HashLink to="/#secao6">
 			<SonicFeio>
 				<h2 id="hash">Você entrou na página do sonic esperando!!!</h2>
 				<div>

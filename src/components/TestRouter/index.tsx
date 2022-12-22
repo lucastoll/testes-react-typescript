@@ -17,7 +17,7 @@ export function TestRouter() {
               Troca de páginas dentro do conceito de SPA com a biblioteca react-router.
 					</h2>
 					<Container data-aos="slide-up">
-						<LinkRouter to="sonicesperando">
+						<LinkRouter to="/sonicesperando">
 							<NewButton>Trocar página</NewButton>     
 						</LinkRouter>
 					</Container>
