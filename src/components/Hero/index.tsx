@@ -6,7 +6,7 @@ import { Wrapper, Container, Link } from "./styles";
 import sonic from "../../assets/hero/sonic.gif";
 import gameplay from "../../assets/hero/gameplay.mp4";
 
-export function Hero () {
+export function Hero() {
 	const {display} = useToggleDisplayState();
 	return (
 		<>
