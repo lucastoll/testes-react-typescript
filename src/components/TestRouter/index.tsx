@@ -1,8 +1,8 @@
 import React from "react";
-import { Link as LinkRouter } from "react-router-dom";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
 import { NewButton, NewWrapper } from "./styles";
 import { Container, Link, Titulo } from "../UseState&props/styles";
+import { Link as LinkRouter } from "react-router-dom";
 
 export function TestRouter() {
 	const {display} = useToggleDisplayState();
