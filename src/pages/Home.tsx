@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Outlet } from "react-router-dom";
 
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -32,7 +31,6 @@ export default function Home() {
 			<TestRouter />
 			<SearchFilter />
 			<UseContext />
-			<Outlet />
 		</>
 	);
 }
