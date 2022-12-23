@@ -1,7 +1,7 @@
 # 🔷 testes-react-typescript
 
 Minha lousa de testes em react e typescript.<br>
-Link: https://lucastoll.github.io/testes-react-typescript/
+Link: https://testes-react-typescript.vercel.app/
 
 https://user-images.githubusercontent.com/86172649/169376617-b628b5a0-bc65-4316-91f7-f6c4047a001e.mp4
 
