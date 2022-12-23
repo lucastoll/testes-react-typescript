@@ -3,6 +3,14 @@ import { useToggleDisplayState } from "../../context/useToggleDisplay";
 import { NewButton, NewWrapper } from "./styles";
 import { Container, Link, Titulo } from "../UseState&props/styles";
 import { Link as LinkRouter } from "react-router-dom";
+import styled from "styled-components";
+
+const NewContainer = styled(Container)`
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: center;
+`;
 
 export function TestRouter() {
 	const {display} = useToggleDisplayState();
@@ -16,11 +24,14 @@ export function TestRouter() {
 					<h2 data-aos="slide-up" style={{color: "#ffffff", maxWidth: "650px", width: "70%", marginBottom: "20px"}}>
               Troca de páginas dentro do conceito de SPA com a biblioteca react-router.
 					</h2>
-					<Container data-aos="slide-up">
+					<NewContainer data-aos="slide-up">
 						<LinkRouter to="/sonicesperando">
-							<NewButton>Trocar página</NewButton>     
+							<NewButton>Sonic puto</NewButton>     
 						</LinkRouter>
-					</Container>
+						<LinkRouter to="/ronaldo">
+							<NewButton>Página 404</NewButton>     
+						</LinkRouter>
+					</NewContainer>
 				</NewWrapper>
 				: null}    
 		</>

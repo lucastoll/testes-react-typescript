@@ -3,8 +3,6 @@ import { HashLink } from "react-router-hash-link";
 import styled from "styled-components";
 import  GifSonicEsperando from "../assets/router/waiting.gif";
 import BalaoFala from "../assets/router/balao.png";
-import { GlobalStyle } from "../styles/GlobalStyle";
-
 
 const SonicFeio = styled.div`
     min-height: 100vh;
@@ -120,7 +118,6 @@ export default function SonicEsperando() {
 				</div>
 				<h2>Clique em qualquer lugar para sair de imediato.</h2>
 			</SonicFeio>
-			<GlobalStyle/>  
 		</HashLink>
 	);
 }
