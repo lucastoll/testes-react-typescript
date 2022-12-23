@@ -1,6 +1,7 @@
 import { Wrapper, DivLogo, WrapperLinks } from "./styles";
 import React, { useState } from "react";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
+import { HashLink } from "react-router-hash-link";
 
 export const Header = function () {
 	const {display} = useToggleDisplayState();
@@ -15,9 +16,9 @@ export const Header = function () {
 			{display ? 
 				<Wrapper mobileWrapperLinks={mobileWrapperLinks}>
 					<DivLogo>
-						<a href="#home">
+						<HashLink to="/#home">
 							<img className="logo" src={"https://www.sonicthehedgehog.com/wp-content/uploads/2021/08/logo-1.png"} alt="" />
-						</a>
+						</HashLink>
 						<img 
 							onClick={() => (handleMenu())}
 							className="hamburguer" 
@@ -27,25 +28,25 @@ export const Header = function () {
 					</DivLogo>
 					<WrapperLinks>
 						<li>
-							<a href="#secao1">States e Props</a>
+							<HashLink to="/#secao1">States e Props</HashLink>
 						</li>
 						<li>
-							<a href="#secao2">UseEffect</a>
+							<HashLink to="/#secao2">UseEffect</HashLink>
 						</li>
 						<li>
-							<a href="#secao3">Formulário</a>
+							<HashLink to="/#secao3">Formulário</HashLink>
 						</li>
 						<li>
-							<a href="#secao4">Renderização com .map</a>
+							<HashLink to="/#secao4">Renderização com .map</HashLink>
 						</li>
 						<li>
-							<a href="#secao5">Router</a>
+							<HashLink to="/#secao5">Router</HashLink>
 						</li>
 						<li>
-							<a href="#secao6">Use Context</a>
+							<HashLink to="/#secao6">Use Context</HashLink>
 						</li>
 						<li>
-							<a href="#secao7">SearchFilter</a>
+							<HashLink to="/#secao7">SearchFilter</HashLink>
 						</li>
 					</WrapperLinks>
 				</Wrapper>

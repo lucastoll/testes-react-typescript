@@ -4,15 +4,18 @@ import {
 	Routes,
 	Route,
 } from "react-router-dom";
-import App from "./pages/App";
+import { Header } from "./components/Header";
+import Home from "./pages/Home";
 import SonicEsperando from "./pages/SonicEsperando";
 
 
 export default function AppRouter() {
 	return (
+		
 		<BrowserRouter> {/* Ter acesso as rotas / dentro do navegador */}
+			<Header />
 			<Routes> {/* parar na rota exata, ex: /cardapio deve parar só em cardapio e não em / também */}
-				<Route path="" element={<App />} /> {/* nossas rotas */}
+				<Route path="" element={<Home />} /> {/* nossas rotas */}
 				<Route path="/sonicesperando" element={<SonicEsperando />} />
 			</Routes>
 		</BrowserRouter>
