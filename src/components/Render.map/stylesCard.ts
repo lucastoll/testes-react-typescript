@@ -19,6 +19,14 @@ padding: 10px;
 gap: 20px;
 position: relative;
 
+button{
+    z-index: 2;
+    background: white;
+    border: 2px solid #012d6c;
+    padding: 2px 5px;
+    color: #012d6c; 
+}
+
 .WrapperNome{
     background: ${props => props.display ? "#012d6c" : "#000000"};
     clip-path: polygon(25% 0%, 100% 0%, 83% 99%, 0 100%);
@@ -52,7 +60,7 @@ position: relative;
 
 .DivTexto{
     width: 90%;
-    height: 100px;
+    min-height: 80px;
     border: ${props => props.display ? "5px solid #012d6c" : "5px solid #000000"};
     font-size: 18px;
     padding: 4px;

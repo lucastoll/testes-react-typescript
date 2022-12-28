@@ -5,6 +5,7 @@ import { Titulo, Link } from "../UseState&props/styles";
 
 export const UseContext = function () {
 	const {display, setDisplay} = useToggleDisplayState();
+	console.log(display);
 	return(
 		<NewWrapper>
 			<Link id="secao6"/>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {  Link, Titulo } from "../UseState&props/styles";
 
-import personagensSonic from "../../assets/searchFilter/personagensSonicSearch.json";
+import personagensSonic from "../../data/personagensSonicSearch.json";
 import { v4 as uuidv4 } from "uuid";
 import Card from "./card";
 
