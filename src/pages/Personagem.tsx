@@ -1,17 +1,33 @@
 /* eslint-disable react/prop-types */
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
 import personagensSonic from "../data/personagensSonicCarrossel.json";
 import contexto from "../assets/render.map/contexto.jpg";
 
-
 export default function Personagem(){
 	const { id } = useParams();
 	const navigate = useNavigate();
 	const location = useLocation();
-	
+
+    let display;
+    if(location.state?.contextDisplay == undefined){
+        display = "true";
+    }
+    else{
+        if(location.state.contextDisplay == true)
+         display = "true";
+        else
+         display = "false";
+    }
 	const personagem = personagensSonic.find(personagem => personagem.nome.toLowerCase() === id?.toLowerCase());
+
+
+    useEffect(() => {
+        if(personagem == undefined){
+            navigate("/404");
+        }
+      }, []);
 
     interface PropsWrapper{
         display: string;
@@ -46,31 +62,28 @@ export default function Personagem(){
 
     `;
 
-	if(!personagem){
-		navigate("/404");
-		return null;
-	}
 	return (
-		<Wrapper display={location.state.contextDisplay.toString()}>
-			{location.state.contextDisplay ? 
-				<>
-					<span onClick={() => navigate(-1)}>
-                         Voltar    
-					</span>                  
-					<h2>{personagem.nome}</h2>
-					<img src={personagem.imagem} alt="" />
-					<p>{personagem.texto}</p>
-				</>
-				:
-				<>
-					<span onClick={() => navigate(-1)}>
-                         Voltar    
-					</span> 
+        <Wrapper display={display}>
+            {
+                display == "true" ?
+                <>                
+                    <span onClick={() => navigate(-1)}>
+                        Voltar    
+                    </span>                  
+                    <h2>{personagem?.nome}</h2>
+                    <img src={personagem?.imagem} alt="" />
+                    <p>{personagem?.texto}</p>
+                </>
+                :
+                <>                
+                    <span onClick={() => navigate(-1)}>
+                        Voltar    
+                    </span> 
                     <img src={contexto} alt="" />
-					<h2>não tem nenhum contexto disponível na página de ver mais</h2>
-				</>
-			}
-		</Wrapper>
+                    <h2>não tem nenhum contexto disponível na página de ver mais</h2>
+                </>
+            }
+        </Wrapper>
 	);
 }
 

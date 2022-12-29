@@ -22,7 +22,7 @@ export function TestRouter() {
 					<Link id="secao5"></Link>
 					<Titulo data-aos="slide-up">Router</Titulo>
 					<h2 data-aos="slide-up" style={{color: "#ffffff", maxWidth: "650px", width: "70%", marginBottom: "20px"}}>
-              Troca de páginas dentro do conceito de SPA com a biblioteca react-router.
+						Troca de páginas dentro do conceito de SPA com a biblioteca react-router.
 					</h2>
 					<NewContainer data-aos="slide-up">
 						<LinkRouter to="/sonicesperando">

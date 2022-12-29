@@ -71,7 +71,7 @@ export default function NotFound() {
 			<Container404>
 				<h2>404</h2>
 				<h3>Você está no lugar errado!, página não encontrada.</h3>
-				<button onClick={() => navigate(-1)}>Retornar</button>
+				<button onClick={() => navigate("/")}>Retornar</button>
 			</Container404>
 		</Wrapper>
 	);
