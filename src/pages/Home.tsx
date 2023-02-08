@@ -10,7 +10,7 @@ import { Formulario } from "../components/Formulario";
 import { RenderMap } from "../components/Render.map";
 import { TestRouter } from "../components/TestRouter"; 
 import { UseContext } from "../components/UseContext";
-import { SearchFilter } from "../components/SearchFilter";
+import SearchFilter  from "../components/SearchFilter";
 
 export default function Home() {
 	useEffect(() => {

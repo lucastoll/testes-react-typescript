@@ -1,15 +1,7 @@
 import styled from "styled-components";
-
-interface PropsContainer {
-    categoryStatus: string;
-    category: string;
-  }
   
-export const Container = styled.div<PropsContainer>`
-display: ${(props) =>
-		props.categoryStatus === props.category || props.categoryStatus === ""
-			? "flex"
-			: "none"};
+export const Container = styled.div`
+display: flex;
 flex-direction: column;
 border: 3px solid white;
 color: white;

@@ -1,17 +1,18 @@
-import React from "react";
+import React, { memo } from "react";
 import { Container } from "./stylesCard";
 
 interface Props {
-  categoryStatus: string;
   nome: string;
   categoria: string;
   forca: number;
   velocidade: number;
 }
 
-export default function Card({ nome, categoria, forca, velocidade, categoryStatus } : Props) {
+function CardFodase({ nome, categoria, forca, velocidade } : Props) {
+	console.log(nome);
+
 	return (
-		<Container categoryStatus={categoryStatus} category={categoria}>
+		<Container>
 			<div className="name">{nome}</div>
 			<div>{categoria}</div>
 			<div>Velocidade: {velocidade}</div>
@@ -19,3 +20,5 @@ export default function Card({ nome, categoria, forca, velocidade, categoryStatu
 		</Container>
 	);
 }
+
+export const Card = memo(CardFodase);

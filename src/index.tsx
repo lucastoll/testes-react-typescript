@@ -9,8 +9,10 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-	<ToggleDisplayProvider>
-		<AppRouter/>
-		<GlobalStyle />
-	</ToggleDisplayProvider>
+	<React.StrictMode>		
+		<ToggleDisplayProvider>
+			<AppRouter/>
+			<GlobalStyle />
+		</ToggleDisplayProvider>
+	</React.StrictMode>
 );
