@@ -12,8 +12,6 @@ import SonicEsperando from "./pages/SonicEsperando";
 
 
 export default function AppRouter() {
-	console.log(Home());
-
 	return (
 		<BrowserRouter> {/* Ter acesso as rotas / dentro do navegador */}
 			<Header />

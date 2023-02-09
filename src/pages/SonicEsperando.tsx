@@ -73,7 +73,6 @@ export default function SonicEsperando() {
 	}, []);
 
 	useEffect(()=> {
-		console.log(seconds);
 		if(seconds === 4){
 			SetFrase("");
 		}

@@ -8,9 +8,7 @@ interface Props {
   velocidade: number;
 }
 
-function CardFodase({ nome, categoria, forca, velocidade } : Props) {
-	console.log(nome);
-
+function Card({ nome, categoria, forca, velocidade } : Props) {
 	return (
 		<Container>
 			<div className="name">{nome}</div>
@@ -21,4 +19,4 @@ function CardFodase({ nome, categoria, forca, velocidade } : Props) {
 	);
 }
 
-export const Card = memo(CardFodase);
+export default memo(Card);

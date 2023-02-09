@@ -1,7 +1,7 @@
 import React, { memo, useEffect, useState } from "react";
-import { Card } from "./card";
+import Card  from "./card";
 import personagensSonic from "../../../data/personagensSonicSearch.json";
-import { CardWrapperStyled } from "./styles";
+import { CardsWrapper } from "./styles";
 
 
 interface Props{
@@ -10,9 +10,7 @@ interface Props{
     searchBarStatus: string;
 }
 
-
-function CardWrapper({categoryStatus, orderStatus, searchBarStatus} : Props) {
-
+function Cards({categoryStatus, orderStatus, searchBarStatus} : Props) {
     const [lista, setLista] = useState(personagensSonic);
 
     function filterOrder(lista) {
@@ -43,7 +41,7 @@ function CardWrapper({categoryStatus, orderStatus, searchBarStatus} : Props) {
     }, [searchBarStatus, categoryStatus, orderStatus]);
 
   return (
-      <CardWrapperStyled>
+      <CardsWrapper>
           {lista.map((personagem) => (
               <Card
                   key={personagem.id}
@@ -53,8 +51,8 @@ function CardWrapper({categoryStatus, orderStatus, searchBarStatus} : Props) {
                   velocidade={personagem.velocidade}
               />
           ))}
-      </CardWrapperStyled>
+      </CardsWrapper>
   );
 }
 
-export const MemoCardWrapper = memo(CardWrapper); 
+export default memo(Cards); 
