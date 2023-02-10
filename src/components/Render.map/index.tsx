@@ -1,6 +1,5 @@
 import React from "react";
 import { useToggleDisplayState } from "../../context/useToggleDisplay";
-
 import personagensSonic from "../../data/personagensSonicCarrossel.json";
 import { Card } from "./card";
 
@@ -17,6 +16,7 @@ export function RenderMap() {
 	const settings = {
 		dots: true,
 		fade: true,
+		lazyLoad: true,
 		infinite: true,
 		speed: 500,
 		slidesToShow: 1,
@@ -28,6 +28,7 @@ export function RenderMap() {
 			{display ? <Titulo data-aos="zoom-in">Renderização com .map e páginas dinamicas (ver mais)</Titulo> : <NewTitulo>?CONTEXTO?</NewTitulo>} 
 			{display ? <h2 data-aos="zoom-in">Dado uma array personagensSonic[ ], a aplicação renderiza este carrousel</h2> : null}
 			<CarouselContainer data-aos="zoom-in">
+				{/* @ts-ignore */}
 				<Slider {...settings}>
 					{personagensSonic.map((personagem, index) => (
 						<div key={index}>
