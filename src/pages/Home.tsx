@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 
-import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
-
+import AOS from "aos";
 import { Hero }  from "../components/Hero";
 import { StatesProps } from "../components/UseState&props";
 import { UseEffect } from "../components/UseEffect";

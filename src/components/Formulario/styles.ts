@@ -19,11 +19,11 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 200px;
+  height: fit-content;
   gap: 10px;
   border: 2px solid white;
 
-  > h1 {
+  > h2 {
     color: white;
     font-size: 24px;
     text-align: center;
@@ -42,5 +42,11 @@ export const Form = styled.form`
       height: 40px;
       padding: 4px;
       font-size: 24px;
+  }
+
+  label{
+    display: flex;
+    gap: 8px;
+    color: white;
   }
   `;
