@@ -10,6 +10,7 @@ import { RenderMap } from "../components/Render.map";
 import { TestRouter } from "../components/TestRouter"; 
 import { UseContext } from "../components/UseContext";
 import SearchFilter  from "../components/SearchFilter";
+import TagManager from "react-gtm-module";
 
 export default function Home() {
 	useEffect(() => {
@@ -18,6 +19,12 @@ export default function Home() {
 			once: true,
 			offset: 200,
 		});
+
+		const tagManagerArgs = {
+			gtmId: "GTM-PTCNSKM"
+		};
+		 
+		TagManager.initialize(tagManagerArgs);
 	}, []);
 
 	return (

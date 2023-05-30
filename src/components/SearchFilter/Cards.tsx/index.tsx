@@ -10,10 +10,18 @@ interface Props{
     searchBarStatus: string;
 }
 
+interface Personagem{
+    id: number,
+    nome: string,
+    categoria: string,
+    forca: number,
+    velocidade: number
+}
+
 function Cards({categoryStatus, orderStatus, searchBarStatus} : Props) {
     const [lista, setLista] = useState(personagensSonic);
 
-    function filterOrder(lista) {
+    function filterOrder(lista : Personagem[]) : Personagem[] {
         switch(orderStatus){
             case "forca":
                 return lista.sort((a, b) => (a.forca < b.forca ? 1 : -1));
@@ -35,7 +43,7 @@ function Cards({categoryStatus, orderStatus, searchBarStatus} : Props) {
     }
 
     useEffect(() => {
-      const novaLista = personagensSonic.filter(personagem => filterSearch(personagem.nome) && filterCategory(personagem.categoria));
+      const novaLista : Personagem[] = personagensSonic.filter(personagem => filterSearch(personagem.nome) && filterCategory(personagem.categoria));
       setLista(filterOrder(novaLista));
 
     }, [searchBarStatus, categoryStatus, orderStatus]);
