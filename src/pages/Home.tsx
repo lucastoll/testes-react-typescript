@@ -21,19 +21,6 @@ export default function Home() {
 		});
 	}, []);
 	
-	const tagManagerArgs = {
-		gtmId: "GTM-PTCNSKM"
-	};
-	
-	TagManager.initialize(tagManagerArgs);
-	
-	//@ts-ignore
-	window.dataLayer.push({
-		event: "pageview"
-	});
-	//@ts-ignore
-	console.log(window.dataLayer);
-	
 	return (
 		<>
 			<Hero />
