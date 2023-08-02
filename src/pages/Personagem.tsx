@@ -8,14 +8,14 @@ import contexto from "../assets/render.map/contexto.jpg";
 export default function Personagem(){
 	const { id } = useParams();
 	const navigate = useNavigate();
-	const location = useLocation();
+	const location : {state : any}= useLocation();
 
     let display;
-    if(location.state?.contextDisplay == undefined){
+    if(location?.state?.contextDisplay == undefined){
         display = "true";
     }
     else{
-        if(location.state.contextDisplay == true)
+        if(location?.state?.contextDisplay == true)
          display = "true";
         else
          display = "false";
