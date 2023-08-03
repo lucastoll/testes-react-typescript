@@ -43,7 +43,7 @@ export const DivLogo = styled.div`
 }
 `;
 
-export const WrapperLinks = styled.div`
+export const WrapperLinks = styled.ul`
   color: #ffffff !important;
   background: url(https://www.sonicthehedgehog.com/wp-content/uploads/2021/08/header-bg.gif);
   display: flex;

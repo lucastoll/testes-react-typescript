@@ -24,7 +24,7 @@ function SearchFilter() {
                     <NewContainer>
                         <Titulo>
                             SearchFilter
-                            <Link id="secao7"></Link>
+                            <Link id="secao6"></Link>
                         </Titulo>
                         <SearchBar
                             type="text"
