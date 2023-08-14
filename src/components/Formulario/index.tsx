@@ -4,7 +4,7 @@ import { NewWrapper, NewButton, Form } from "./styles";
 import { Link, Titulo } from "../UseState&props/styles";
 
 
-export function Formulario() {
+export function Formulario(testDisplay) {
 	const {display} = useToggleDisplayState();
 
 	interface ICadastroFormulario{
@@ -54,12 +54,12 @@ export function Formulario() {
     
 	return (
 		<>
-			{display ?
-				<NewWrapper>
+			{display || testDisplay ?
+				<NewWrapper role="section">
 					<Link id="secao3"></Link>
 					<Titulo data-aos="fade-right">Formulário.</Titulo>
-					<Form data-aos="fade-right" onSubmit={submitForm}>
-						<h2>Boas vindas {textoH2}</h2>
+					<Form data-aos="fade-right" onSubmit={submitForm} role="form">
+						<h2 data-testid="FormTitle">Boas vindas {textoH2}</h2>
 						<input
 							type="text"
 							value={nome}
