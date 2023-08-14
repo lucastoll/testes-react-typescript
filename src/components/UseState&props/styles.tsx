@@ -7,7 +7,7 @@ interface Props{
     setNum: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   width: 100%;
   height: auto;
   background-repeat: repeat;
