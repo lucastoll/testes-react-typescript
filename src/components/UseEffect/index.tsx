@@ -5,7 +5,7 @@ import imgMobile from "../../assets/useEffect/mobile.png";
 import imgTablet from "../../assets/useEffect/tablet.png";
 import { Link, Titulo } from "../UseState&props/styles";
 
-export const UseEffect = function () {
+export const UseEffect = function (testDisplay) {
 	const {display} = useToggleDisplayState();
 	const [width, setWidth] = useState(window.innerWidth);
 
@@ -18,8 +18,8 @@ export const UseEffect = function () {
 
 	return (
 		<>
-			{ display ? 
-				<NewWrapper>
+			{ display || testDisplay ? 
+				<NewWrapper role="section">
 					<Link id="secao2"></Link>
 					<Titulo data-aos="slide-up">UseEffect</Titulo>
 					<h2 data-aos="slide-up" style={{color: "#ffffff", maxWidth: "650px", width: "70%", marginBottom: "20px"}}>Nesse exemplo o hook verifica sempre que a width da tela do usuário muda, mostrando um celular ou um tablet de acordo com a width.</h2>
@@ -27,10 +27,10 @@ export const UseEffect = function () {
 						{
 							width < 768 ? 
 								<>
-									<img data-aos="" src={imgMobile} alt=""></img>
+									<img data-aos="" src={imgMobile} alt="Celular"></img>
 								</>
 								: 
-								<img data-aos="" src={imgTablet} alt=""></img>
+								<img data-aos="" src={imgTablet} alt="Tablet"></img>
 						}
 					</NewContainer>
 				</NewWrapper>

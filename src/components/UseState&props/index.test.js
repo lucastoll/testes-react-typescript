@@ -5,7 +5,7 @@ import { screen, render, fireEvent } from "@testing-library/react";
 import { StatesProps } from "./index";
 import { MemoryRouter } from "react-router-dom";
 
-describe("<Header/> component", () => {
+describe("<StatesProps/> component", () => {
     beforeEach(() => {
         render(<MemoryRouter><StatesProps testDisplay={true}></StatesProps></MemoryRouter>);
     });
@@ -24,5 +24,4 @@ describe("<Header/> component", () => {
         fireEvent.click(button);
         expect(info).toHaveTextContent("2");
     });
-
 });   
